@@ -9,3 +9,6 @@ deploy:
   bucket: new.hashtagcharity.org
   skip_cleanup: true
   region: us-west-2
+cache:
+  directories:
+    - node_modules
