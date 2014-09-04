@@ -5,7 +5,7 @@ deploy:
   provider: s3
   access_key_id: AKIAI2O5LRFJZNIRLVBA
   secret_access_key:
-    secure: JMa11FsuUUv4WJmJWu25mgpTUEmL9tIMtwGLaPfTU7dES1/ZPM/SV6W7Z97B50Zy0wPAurgNdVEn3mTYMEJWmP6ighn4ZXsLAdFPzqhupNxHHS+iNmUIpJ9yoWL3sFUbOWp0ve88cF5cgnQNNEvXKXeQ3ik21orNb30v9LLM12k=
+    secure: IjUFRQYTsBsxrqTFWrTdg4n9WQ5IybCbOxs1b5piqfWRYwxFvJiUT4KEzYMrDCj84QKPdpZ81M+zPNulzR8yC4lzL+Nz5k8yKG/o50gH8whdEmClXDKInuzngoUcbauJzpzBlx56kf9MUiERCjIQa2dw31gRWcIg37GhcKBzXlM=
   bucket: new.hashtagcharity.org
   skip_cleanup: true
   region: us-west-2
