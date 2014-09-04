@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '0.11'
+deploy:
+  provider: s3
+  access_key_id: AKIAI2O5LRFJZNIRLVBA
+  secret_access_key:
+    secure: JMa11FsuUUv4WJmJWu25mgpTUEmL9tIMtwGLaPfTU7dES1/ZPM/SV6W7Z97B50Zy0wPAurgNdVEn3mTYMEJWmP6ighn4ZXsLAdFPzqhupNxHHS+iNmUIpJ9yoWL3sFUbOWp0ve88cF5cgnQNNEvXKXeQ3ik21orNb30v9LLM12k=
+  bucket: new.hashtagcharity.org
+  skip_cleanup: true
+  region: us-west-2
