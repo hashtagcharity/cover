@@ -24,6 +24,7 @@
             .font(25px, white);
             font-family: @font-family-demo;
             font-weight: 800;
+            
         }
         .nav {
             > li {
@@ -53,8 +54,8 @@
     left: 0;
     width: 100%;
     position: relative;
-    padding-top: 360px;
-    padding-bottom: 370px;
+    padding-top: 100px;
+    padding-bottom: 150px;
     color: white;
     text-align: center;
     background: #1b1e21;
@@ -62,8 +63,8 @@
         background-image: url('@{startup-basePath}common-files/img/header/img-video.jpg');
     }
     @media (max-width: 991px) {
-        padding-top: 260px;
-        padding-bottom: 170px;
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
     .hero-unit {
         margin: 0;
@@ -75,13 +76,12 @@
             font-size: 42px;
             font-weight: 300;
             letter-spacing: 1px;
-            @media (max-width: 991px) {
-                display: block;
-            }  
+            width: 100%;
         }
         span {
             font-weight: 200;
-            font-size: 24px;
+            font-size: 20px;
+            letter-spacing: 0px;
             @media (max-width: 991px) {
                 display: block;
             }
@@ -106,15 +106,17 @@
     .img {
         max-width: 350px;
         margin: auto auto;
-        margin-top: -200px;
+        margin-top: 0px;
 
         img {
             width: 100%;
         }
     }    
     .btn.btn-clear {
-        margin-left: 0px;
-        margin-top: 100px;
+
+        margin: auto auto;
+        margin-top: 150px;
+        
         .box-sizing(border-box);
         border: 2px solid @brand-danger;
         .font(14px);
