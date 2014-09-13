@@ -1,61 +1,9 @@
-/**
- * Header 23 stylesheet  
- * */
- .header-23 {
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
-    > .container {
-        position: relative;
-    }
-    .navbar {
-        position: absolute;
-        z-index: 2;
-        top: 60px;
-        font-family: @font-family-demo;
-        &.navbar-fixed-top {
-            position: fixed;
-        }
-        .brand {
-            padding-left: 0;
-            .font(25px, white);
-            font-family: @font-family-demo;
-            font-weight: 800;
-            
-        }
-        .nav {
-            > li {
-                margin-left: 20px;
-                &:first-child {
-                    margin-left: 0;
-                }
-                > a {
-                    padding: 31px 0 27px;
-                    .font(16px, white);
-                    font-weight: 500;
-                    letter-spacing: 1px;
-                    .a-color(white, #506e8c);
-                }
-                &.active > a {
-                    .a-color(#506e8c);
-                }
-            }
-        }
-        .navbar-toggle {
-            margin-top: 28px;
-        }
-    }
-}
-.header-23-sub {
+
+.header-with-video { 
     z-index: 50;
     left: 0;
     width: 100%;
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 150px;
     color: white;
     text-align: center;
     background: #1b1e21;
@@ -66,7 +14,43 @@
         padding-top: 0px;
         padding-bottom: 0px;
     }
-    .hero-unit {
+   .section-padding;
+   .hero-unit {
+    .share-us-btn {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      border-color: #fff;
+      .btn-base;
+    }
+    .sign-up-btn {
+      background: #8b5789;
+      border-color: #8b5789;
+      .btn-base;
+    }
+    h1 {
+      .h1;
+      .no-margin;
+      .dark-bg-font-color;
+      span {
+        .dark-bg-font-color;
+        .h1-heavy;
+        .no-margin;
+      }
+
+    }
+    h2 {
+      .dark-bg-font-color;
+      .no-margin;
+    }
+  }
+  .hero-unit {
+        .share-us-btn {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      border-color: #fff;
+      .btn-base;
+    }
+            
         margin: 0;
         padding: 0;
         background: transparent;
