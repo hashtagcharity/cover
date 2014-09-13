@@ -5,7 +5,7 @@
     this.bind();
   }
 
-  Social.prototype.bind = function() {    
+  Social.prototype.bind = function() {
     $('.track_share').on('click', function() {
       var socialPlatform = $(this).data('social-platform');
       ga('send', 'social', socialPlatform, 'share', getCampaign(socialPlatform));
