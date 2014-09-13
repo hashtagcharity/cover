@@ -6,11 +6,11 @@
 @import '../../startup/common-files/less/helper.less';
 @import '../../startup/common-files/less/navbar.less';
 
-@import '../../less-files/header.less';
+
 @import '../../less-files/section3.less';
 
 
-
+@import '../../startup/ui-kit/ui-kit-header/less/header-23.less';
 @import '../../startup/ui-kit/ui-kit-content/less/content-8.less';
 @import '../../startup/ui-kit/ui-kit-content/less/content-31.less';
 @import '../../startup/ui-kit/ui-kit-content/less/content-22.less';
@@ -22,16 +22,23 @@
 @import 'variables.less';
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
+@Helvetica-Heavy: "Helvetica Heavy";
+@Helvetica-Ultralight: "Helvetica Ultralight";
+@Montserrat: "Montserrat";
+
+@h1-font-size: 60pt;
+@h2-font-size: 16pt;
+
 @font-face {
   font-family: @Helvetica-Ultralight;
   src: url("../font/HELVETICA_ULTRALIGHT.OTF");
-}
 
+}
 @font-face {
   font-family: @Helvetica-Heavy;
   src: url("../font/HELVETICA_HEAVY.OTF");
-}
 
+}
 .section-padding {
   padding-bottom: @big-padding;
   padding-top: @big-padding;
@@ -105,4 +112,35 @@ h1:extend(.h1) {
 h2:extend(.h2) {
   
 
+}
+.header-23-sub {
+  .section-padding;
+  .hero-unit {
+    .share-us-btn {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      border-color: #fff;
+      .btn-base;
+    }
+    .sign-up-btn {
+      background: #8b5789;
+      border-color: #8b5789;
+      .btn-base;
+    }
+    h1 {
+      .h1;
+      .no-margin;
+      .dark-bg-font-color;
+      span {
+        .dark-bg-font-color;
+        .h1-heavy;
+        .no-margin;
+      }
+
+    }
+    h2 {
+      .dark-bg-font-color;
+      .no-margin;
+    }
+  }
 }
