@@ -23,8 +23,6 @@
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
-
-
 .border-radius(@radius) {
   -moz-border-radius: @radius;
   -webkit-border-radius: @radius;
@@ -78,7 +76,7 @@ h2:extend(.h2) {
 }
 
 .p {
-  color: #5f5f6e;
+  color: @text-font-color;
   font-family: @Montserrat;
   font-size: @text-font-size;
   .no-margin;
@@ -86,4 +84,3 @@ h2:extend(.h2) {
 p:extends(.p) {
   
 }
-
