@@ -11,136 +11,87 @@
     > .container {
         position: relative;
     }
-    .navbar {
-        position: absolute;
-        z-index: 2;
-        top: 60px;
-        font-family: @font-family-demo;
-        &.navbar-fixed-top {
-            position: fixed;
-        }
-        .brand {
-            padding-left: 0;
-            .font(25px, white);
-            font-family: @font-family-demo;
-            font-weight: 800;
-            
-        }
-        .nav {
-            > li {
-                margin-left: 20px;
-                &:first-child {
-                    margin-left: 0;
-                }
-                > a {
-                    padding: 31px 0 27px;
-                    .font(16px, white);
-                    font-weight: 500;
-                    letter-spacing: 1px;
-                    .a-color(white, #506e8c);
-                }
-                &.active > a {
-                    .a-color(#506e8c);
-                }
-            }
-        }
-        .navbar-toggle {
-            margin-top: 28px;
-        }
-    }
 }
 .header-23-sub {
+    .section-padding;
     z-index: 50;
     left: 0;
     width: 100%;
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 150px;
     color: white;
     text-align: center;
     background: #1b1e21;
+    h1 {
+      .h1;
+      color: #fff;
+      strong {
+        color: #fff;
+      }
+    }
+    h2 {
+      .dark-bg-font-color;
+      margin-bottom: 50px;
+    }
     .background {
         background-image: url('@{startup-basePath}common-files/img/header/img-video.jpg');
     }
-    @media (max-width: 991px) {
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-    .hero-unit {
-        margin: 0;
-        padding: 0;
-        background: transparent;
-        font-size: 30px;
-        letter-spacing: -1px;
-        strong {
-            font-size: 42px;
-            font-weight: 300;
-            letter-spacing: 1px;
-            width: 100%;
-        }
-        span {
-            font-weight: 200;
-            font-size: 20px;
-            letter-spacing: 0px;
-            @media (max-width: 991px) {
-                display: block;
-            }
-        }
-        .btn-play {
-            display: inline-block;
-            text-indent: -9999px;
-            vertical-align: middle;
-            overflow: hidden;
-            width: 67px;
-            height: 67px;
-            margin: 0 50px;
-            background: url("@{startup-basePath}common-files/img/header/btn-play.png") no-repeat;
-            @media (max-width: 991px) {
-                margin: 35px 0;
-            }
-        }
-    }
     .background {
-        .opacity(90);
+        .opacity(70);
     }
     .img {
         max-width: 350px;
         margin: auto auto;
         margin-top: 0px;
+        margin-bottom: 50px;
 
         img {
             width: 100%;
         }
     }    
-    .btn.btn-clear {
-
-        margin: auto auto;
-        margin-top: 150px;
-        
+    .btn.btn-signup {
+        width: 300px;
         .box-sizing(border-box);
         border: 2px solid @brand-danger;
-        .font(14px);
-        font-weight: 300;
+        .font(12px);
         font-family: @font-family-demo;
-        padding: 15px 46px;
+        padding: 20px 80px;
         color: #fff;
-        background: #41C944;
-        border-color: #41C944;
-        letter-spacing: 1px;
+        background: @lead-color;
+        border-color: @lead-color;
         &:hover, &:focus {
-                    letter-spacing: 1px;
-            border-color: #41C944;
-
-            background: #41C944;
+            border-color: @lead-color;
+            background: @lead-color;
             color: rgba(255, 255, 255, 0.75);
         }
         &:active, &.active {
-                    letter-spacing: 1px;
-            border-color: #41C944;
-
-            background: #41C944;
+            border-color: @lead-color;
+            background: @lead-color;
             color: rgba(255, 255, 255, 0.75);
         }
+        .btn-base;
+    }
+    
+    .btn.btn-share {
+        .box-sizing(border-box);
+        border: 2px solid @brand-danger;
+        .font(12px);
+        font-family: @font-family-demo;
+        padding: 20px 80px;
+        width: 300px;
+        color: #fff;
+        background: transparent;
+        border-color: #fff;
+        &:hover, &:focus {
+            background: transparent;
+            border-color: #fff;
+            color: rgba(255, 255, 255, 0.75);
+        }
+        &:active, &.active {
+            background: transparent;
+            border-color: #fff;
+            color: rgba(255, 255, 255, 0.75);
+        }
+        .btn-base;
     }
 }
 .mask {
@@ -156,27 +107,5 @@
   width: 100%;
   display: none;
 }
-.popup-video {
-  z-index: 1000;
-  margin: 0 10%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  position: absolute;
-  overflow: hidden;
-  &.shown {
-    position: fixed;
-    width: 80%;
-    height: 100%;
-    overflow: visible;
-    display: none;
-  }
-  > * {
-    width: 100%;
-    height: 100%;
-  }
-}
+
 

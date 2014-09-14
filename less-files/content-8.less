@@ -13,9 +13,8 @@
         margin:70px 0 35px;
     }
     p {
-        .font(18px);
-        margin-bottom:43px;
-    }
+    .p;
+}
     .img {
         max-width: 397px;
         margin: 0 auto;
@@ -24,24 +23,29 @@
             width: 100%;
         }
     }
-    .btn.btn-clear {
+
+    .btn.btn-signup {
+        width: 300px;
         .box-sizing(border-box);
-        background: none;
         border: 2px solid @brand-danger;
-        .font(14px);
-        font-weight: 500;
+        .font(12px);
         font-family: @font-family-demo;
-        padding: 12px 28px 12px;
-        color: @brand-danger;
+        padding: 20px 80px;
+        color: @lead-color;
+        background: transparent;
+        border-color: @lead-color;
         &:hover, &:focus {
-            background: @brand-danger;
             color: #fff;
+            background: @lead-color;
+            border-color: @lead-color;
         }
         &:active, &.active {
-            border-color: @btn-danger-active-bg;
-            background: @btn-danger-active-bg;
-            color: rgba(255, 255, 255, 0.75);
+            color: #fff;
+            background: @lead-color;
+            border-color: @lead-color;
+            
         }
+        .btn-base;
     }
     .v-center;
 }
