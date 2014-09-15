@@ -1,8 +1,6 @@
 .section3 {
     background: #ffffff;
     position:relative;
-    padding-top:125px;
-    padding-bottom:125px;
     text-align: center;
     .lead {
         .font(22px);
@@ -11,21 +9,12 @@
         margin-bottom: 0;
     }
     h3 {
-        .font(35px, @text-color-heading);
-        font-family:@font-family-demo;
-        font-weight:300;
-        margin: 0 0 36px;
+        .h2;
+        color: @lead-color;
     }
     .features {
-        h6 {
-            text-transform: none;
-            margin-top: 37px;
-            font-family: @font-family-demo;
-            font-weight: 500;
-            font-size: 18px;
-        }
-        .circle-full-medium {
-            margin: 0 auto;
+        .circle-full-medium, .circle-full-small {
+            .centering;
         }
     }
 }
