@@ -53,27 +53,36 @@
         margin: -1px 0px 0px -4px;
         padding: 12px 25px 11px 25px;
     }
-
-    .circle-transparent {
-        margin: 0 auto;
+        
+    .share-base(@bg-image, @r, @g, @b) {
+        width: 70px;
+        height: 70px;
+        border: 1px solid #fff;
+        background-color: transparent;
+        .border-radius(75px);
+        background-image: url(@bg-image);
+        &:hover, &:focus, &:active, &.active {
+            background-image: url(@bg-image);
+            background-color: rgba(@r, @g, @b, 0.6);
+        }
         @media(max-width: @screen-sm-min) {
             margin-bottom: 30px;
         }
     }
-        
+
     .facebook-share {
-        background-image: url('../../img/share_facebook.png');
+        .share-base('../../img/share_facebook.png', 59, 89, 152);
     }
     .twitter-share {
-        background-image: url('../../img/share_twitter.png');
+        .share-base('../../img/share_twitter.png', 64, 153, 255);
     }
     .linkedin-share {
-        background-image: url('../../img/share_linkedin.png');
+        .share-base('../../img/share_linkedin.png', 0, 123, 182);
     }
     .googleplus-share {
-        background-image: url('../../img/share_google.png');
+        .share-base('../../img/share_google.png', 221, 75, 57);
     }
     .pinterest-share {
-        background-image: url('../../img/share_pinterest.png');
+        .share-base('../../img/share_pinterest.png', 203, 32, 39);
     }
 }
