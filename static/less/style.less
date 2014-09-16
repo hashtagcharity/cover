@@ -18,7 +18,7 @@
 @import '../../less-files/project-common.less';
 @import '../../less-files/project-4.less';
 @import '../../less-files/content-36.less';
-@import '../../less-files/crew-1.less';
+@import '../../less-files/crew-4.less';
 @import '../../less-files/contact-4.less';
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
@@ -56,6 +56,7 @@
   }
 
 }
+
 .h2 {
   font-family: @Montserrat;
   font-size: @h2-font-size;
@@ -63,17 +64,22 @@
   @media(max-width: @screen-sm-min) {
     font-size: 8pt;
   }
-
 }
+
+.h3 {
+    .h2;
+}
+
 h1:extend(.h1) {
   strong {
     .h1-heavy;
     .lead-color;
   }
+}
 
-}
-h2:extend(.h2) {
-}
+h2:extend(.h2) {}
+
+h3:extend(.h3) {}
 
 .p {
   color: @text-font-color;
@@ -81,6 +87,7 @@ h2:extend(.h2) {
   font-size: @text-font-size;
   .no-margin;
 }
+
 p:extends(.p) {
   
 }
