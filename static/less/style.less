@@ -13,6 +13,7 @@
 @import '../../less-files/section3.less';
 @import '../../less-files/header-23.less';
 @import '../../less-files/content-8.less';
+@import '../../less-files/counter-1.less';
 @import '../../less-files/content-31.less';
 @import '../../less-files/content-22.less';
 @import '../../less-files/project-common.less';
@@ -20,6 +21,7 @@
 @import '../../less-files/content-36.less';
 @import '../../less-files/crew-4.less';
 @import '../../less-files/contact-4.less';
+@import '../../less-files/footer-1.less';
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
@@ -85,11 +87,11 @@ h3:extend(.h3) {}
   color: @text-font-color;
   font-family: @Montserrat;
   font-size: @text-font-size;
-  .no-margin;
+  .no-margin();
 }
 
 p:extends(.p) {
-  
+  .no-margin();
 }
     
 .circle-full(@size) {
