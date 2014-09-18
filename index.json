@@ -7,15 +7,15 @@
     },
 
     "header": { 
-        "title": "VOLUNTEERING:<strong>SOLVED</strong>",
-        "subtitle": "FIND A CAUSE. PLEDGE YOUR TECH SKILLS. MAKE THE WORLD BETTER."
+        "title": "VOLUNTEER YOUR <strong>SKILLS</strong>",
+        "subtitle": ""
     },
     "pitch": {
-        "title": "<strong>SKILL</strong> BASED <strong>VOLUNTEERING</strong>",
+        "title": "FIND A <strong>CAUSE. </strong>PLEDGE YOUR <strong>SKILLS.<br/></strong>MAKE A <strong>DIFFERENCE.</strong>",
         "description": "Nonprofits, NGOs, and charities have to spend money on IT development. That money could be used on their actual missions but they need the IT. #Charity is a new platform that connects the tech needs of organizations to individuals or teams of IT experts willing to volunteer their tech skills and time."
     },
     "mainthings": {
-        "title": "HAVE A <strong>GOOD CAUSE</strong> AND NEED <strong>IT DEVELOPMENT</strong>?<br/>HAVE <strong>TECH SKILLS</strong> TO <strong>VOLUNTEER</strong>?",
+        "title": "HAVE AN<strong> IDEA</strong> AND NEED <strong>HELP</strong>?<br/>HAVE <strong> SKILLS</strong> TO <strong>VOLUNTEER</strong>?",
         "description": "Have a good cause and need IT Development? Have Tech Skills to Volunteer?",
         "thing1": {
             "title": "MAIN THING 1",
