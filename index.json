@@ -8,15 +8,15 @@
 
     "header": { 
         "title": "VOLUNTEERING:<strong>SOLVED</strong>",
-        "subtitle": “FIND A CAUSE. PLEDGE YOUR TECH SKILLS. MAKE THE WORLD BETTER.”
+        "subtitle": "FIND A CAUSE. PLEDGE YOUR TECH SKILLS. MAKE THE WORLD BETTER."
     },
     "pitch": {
-        "title": "PUT THE <strong>30 SECONDS</strong> PITCH<br/>HERE ABOUT <strong>#CHARITY</strong>",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu molestie mi, eget vehicula nibh. Aenean enim arcu, venenatis vitae commodo non, tincidunt vel sapien. Donec posuere lorem vitae lectus porttitor, vitae maximus lacus volutpat"
+        "title": "<strong>SKILL</strong> BASED <strong>VOLUNTEERING</strong>",
+        "description": "Nonprofits, NGOs, and charities have to spend money on IT development. That money could be used on their actual missions but they need the IT. #Charity is a new platform that connects the tech needs of organizations to individuals or teams of IT experts willing to volunteer their tech skills and time."
     },
     "mainthings": {
-        "title": "PUT THE <strong>3 MAIN THINGS</strong> HERE <br/>ABOUT<strong>#CHARITY</strong>",
-        "description": "Put a nice sentence here why it is different than any other charity",
+        "title": "HAVE A <strong>GOOD CAUSE</strong> AND NEED <strong>IT DEVELOPMENT</strong>?<br/>HAVE <strong>TECH SKILLS</strong> TO <strong>VOLUNTEER</strong>?",
+        "description": "Have a good cause and need IT Development? Have Tech Skills to Volunteer?",
         "thing1": {
             "title": "MAIN THING 1",
             "description": "Details about the Main thing 1 here - in one or two sentences."
