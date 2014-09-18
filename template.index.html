@@ -52,7 +52,7 @@
           </div>
           <div class="row low-margin">
             <div class="col-sm-12">
-                <h1>{{ header.title1 }}<strong>{{ header.title2 }}</strong></h1>
+                <h1>{{ header.title|raw }}</h1>
             </div>
           </div>
 
@@ -80,19 +80,19 @@
             </div>
             <div class="row mid-margin">
                 <div class="col-sm-12">
-                    <h1>PUT THE <strong>30 SECONDS</strong> PITCH<br/>HERE ABOUT <strong>#CHARITY</strong></h1>
+                    <h1>{{ pitch.title|raw }}</h1>
                 </div>
             </div>
             <div class="row mid-margin">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu molestie mi, eget vehicula nibh. Aenean enim arcu, venenatis vitae commodo non, tincidunt vel sapien. Donec posuere lorem vitae lectus porttitor, vitae maximus lacus volutpat</p>
+                    <p>{{ pitch.description }}</p>
                 </div>
                 <div class="col-sm-2"></div>
             </div>
             <div class="row no-margin">
                 <div class="col-xs-12">
-                    <a class="btn btn-large btn-signup" href="#workinghard">SIGN UP NOW</a>
+                    <a class="btn btn-large btn-signup" href="#workinghard">{{ common.button.signup }}</a>
                 </div>
             </div>
         </div>
@@ -103,13 +103,13 @@
       <div class="container">
         <div class="row mid-margin">
           <div class="col-sm-12">
-              <h1>PUT THE <strong>3 MAIN THINGS</strong> HERE <br/>ABOUT<strong>#CHARITY</strong></h1>
+              <h1>{{ mainthings.title|raw }}</h1>
           </div>
         </div>
         
         <div class="row mid-margin">
             <div class="col-sm-12">
-                <p>Put a nice sentence here why it is different than any other charity</p>
+                <p>{{ mainthings.description }}</p>
             </div>
         </div>
         
@@ -122,13 +122,13 @@
             
             <div class="row low-margin">
                 <div class="col-sm-12">
-                    <h3>MAIN THING 1</h3>
+                    <h3>{{ mainthings.thing1.title }}</h3>
                 </div>
             </div>
             
             <div class="row no-margin">
                 <div class="col-sm-12">
-                    <p>Details about the Main thing 1 here - in one or two sentences.</p>
+                    <p>{{ mainthings.thing1.description }}</p>
                 </div>
             </div>
           </div>
@@ -140,16 +140,15 @@
               
               <div class="row low-margin">
                   <div class="col-sm-12">
-                      <h3>MAIN THING 2</h3>
+                      <h3>{{ mainthings.thing2.title }}</h3>
                   </div>
               </div>
               
               <div class="row no-margin">
                   <div class="col-sm-12">
-                      <p>Details about the Main thing 2 here - in one or two sentences.</p>
+                      <p>{{ mainthings.thing2.description }}</p>
                   </div>
               </div>
-              
           </div>
           
           <div class="col-sm-4">
@@ -159,16 +158,15 @@
               
               <div class="row low-margin">
                   <div class="col-sm-12">
-                      <h3>MAIN THING 3</h3>
+                      <h3>{{ mainthings.thing3.title }}</h3>
                   </div>
               </div>
               
               <div class="row no-margin">
                   <div class="col-sm-12">
-                      <p>Details about the Main thing 3 here - in one or two sentences.</p>
+                      <p>{{ mainthings.thing3.description }}</p>
                   </div>
               </div>
-              
           </div>
           
         </div>
@@ -185,12 +183,12 @@
             </div>
             <div class="row mid-margin">
                 <div class="col-xs-12">
-                    <p>professionals already subscribed for the launch</p>
+                    <p>{{ counter.text }}</p>
                 </div>
             </div>
             <div class="row no-margin">
                 <div class="col-xs-12">
-                    <a class="btn btn-large btn-signup" href="#workinghard">SIGN UP NOW</a>
+                    <a class="btn btn-large btn-signup" href="#workinghard">{{ common.button.signup }}</a>
                 </div>
             </div>
         </div>
@@ -330,13 +328,12 @@
         <div class="container">
             <div class="row mid-margin">
                 <div class="col-sm-12">
-                    <h1>SMART<strong>MATCH</strong></h1>
+                    <h1>{{ smartmatch.title|raw }}</h1>
                 </div>
             </div>
           <div class="row mid-margin">
             <div class="col-sm-6 col-sm-offset-3">
-              <p>Put the 30 seconds pitch here. It should be very easy to understand and not too long. Put the 30 seconds pitch here. It should be very easy to understand and not too long.
-              </p>
+                <p>{{ smartmatch.description }}</p>
             </div>
           </div>
           <div class="row mid-margin">
@@ -344,24 +341,22 @@
                   <div class="circle-full-big"></div>
               </div>
           </div>
-        <div class="row no-margin">
-              <a class="btn btn-large btn-signup" href="#workinghard">SIGN UP NOW</a>
+          <div class="row no-margin">
+            <a class="btn btn-large btn-signup" href="#workinghard">{{ common.button.signup }}</a>
           </div>
         </div>
     </section>
    
    
-    <section id="partners" class="section3">
+   <section id="partners" class="section3">
        <div class="container">
            <div class="row mid-margin">
                <div class="col-sm-12">
-                   <h1>WE ARE <strong>NOT ALONE</strong><br/>WE ALREADY HAVE <strong>GREAT PARTNERS</strong><br/>AND LOOKING FOR MORE</h1>
+                   <h1>{{ partners.title|raw }}</h1>
                </div>
            </div>
            
-           
            <div class="row features">
-               
                <div class="col-sm-3">
                    <div class="row mid-margin">
                        <div class="circle-full-small"></div>
@@ -369,13 +364,13 @@
                    
                    <div class="row low-margin">
                        <div class="col-sm-12">
-                           <h3>ACTION AGAINST HUNGER</h3>
+                           <h3>{{ partners.partner1.name }}</h3>
                        </div>
                    </div>
                    
                    <div class="row no-margin">
                        <div class="col-sm-12">
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dolor ex. Nam arcu enim, gravida id accumsan feugiat, rutrum pulvinar nisi.</p>
+                           <p>{{ partners.partner1.description }}</p>
                        </div>
                    </div>
                </div>
@@ -387,16 +382,15 @@
                    
                    <div class="row low-margin">
                        <div class="col-sm-12">
-                           <h3>ACTION AGAINST HUNGER</h3>
+                           <h3>{{ partners.partner2.name }}</h3>
                        </div>
                    </div>
                    
                    <div class="row no-margin">
                        <div class="col-sm-12">
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dolor ex. Nam arcu enim, gravida id accumsan feugiat, rutrum pulvinar nisi.</p>
+                           <p>{{ partners.partner2.description }}</p>
                        </div>
                    </div>
-                   
                </div>
                
                <div class="col-sm-3">
@@ -406,36 +400,35 @@
                    
                    <div class="row low-margin">
                        <div class="col-sm-12">
-                           <h3>ACTION AGAINST HUNGER</h3>
+                           <h3>{{ partners.partner3.name }}</h3>
                        </div>
                    </div>
                    
                    <div class="row no-margin">
                        <div class="col-sm-12">
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dolor ex. Nam arcu enim, gravida id accumsan feugiat, rutrum pulvinar nisi.</p>
+                           <p>{{ partners.partner3.description }}</p>
+                       </div>
+                   </div>
+               </div>
+               
+               <div class="col-sm-3">
+                   <div class="row mid-margin">
+                       <div class="circle-full-small"></div>
+                   </div>
+                   
+                   <div class="row low-margin">
+                       <div class="col-sm-12">
+                           <h3>{{ partners.partner4.name }}</h3>
                        </div>
                    </div>
                    
+                   <div class="row no-margin">
+                       <div class="col-sm-12">
+                           <p>{{ partners.partner4.description }}</p>
+                       </div>
+                   </div>
                </div>
-
-                <div class="col-sm-3">
-                    <div class="row mid-margin">
-                        <div class="circle-full-small"></div>
-                    </div>
-    
-                <div class="row low-margin">
-                    <div class="col-sm-12">
-                        <h3>ACTION AGAINST HUNGER</h3>
-                    </div>
-                </div>
-    
-                <div class="row no-margin">
-                    <div class="col-sm-12">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dolor ex. Nam arcu enim, gravida id accumsan feugiat, rutrum pulvinar nisi.</p>
-                    </div>
-                </div>
-    
-            </div>
+               
            </div>
        </div>
    </section>
@@ -445,32 +438,31 @@
     <div class="container">
         <div class="row mid-margin">
             <div class="col-sm-12">
-                <h1><strong>WE ARE WORKING HARD</strong><br /> ON THE BEST CHARITY PLATFORM</h1>
+                <h1>{{ workinghard.title|raw }}</h1>
             </div>
         </div>
         <div class="row mid-margin">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
-                <p>Describe that we are working hard on the product and will launch soon. Meanwhile they should subscribe so we can let them know when we launch.</p>
+                <p>{{ workinghard.description }}</p>
             </div>
             <div class="col-sm-2"></div>
         </div>
         <div class="row mid-margin">
             <div class="col-sm-12">
-                <input type="text" placeholder="Enter your e-mail" spellcheck="false">
-                <a class="btn btn-large btn-submit" href="#">Submit</a>
+                <input type="text" placeholder="{{ workinghard.emailtext }}" spellcheck="false">
+                    <a class="btn btn-large btn-submit" href="#">{{ workinghard.submit }}</a>
             </div>
         </div>
 
         <div class="row mid-margin">
             <div class="col-sm-12">
-                <p>Some stuff to elaborate on..</p>
+                <p>{{ workinghard.stuff }}</p>
             </div>
         </div>
 
         <div class="row no-margin">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-md-offset-3">
                 <div id="sharebuttons" class="row">
                     
                     <div class="col-xs-2 col-xs-offset-4 col-sm-2 col-sm-offset-1">
@@ -490,7 +482,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3"></div>
         </div>
 
     </section>
@@ -500,7 +491,7 @@
        <div class="container">
            <div class="row mid-margin">
                <div class="col-sm-12">
-                   <h1>THE ENTHUSIASTIC <strong>TEAM</strong><br/>BEHIND <strong>#CHARITY</strong></h1>
+                   <h1>{{ team.title|raw }}</h1>
                 </div>
            </div>
            <div class="members row mid-margin">
@@ -508,15 +499,15 @@
                    <div class="member-wrapper">
                        <div class="member">
                            <div class="photo-wrapper">
-                               <div class="photo"><img src="img/jozsef_czapovics.jpg" alt=""></div>
+                               <div class="photo"><img src="{{ team.member1.img }}" alt=""></div>
                                <div class="overlay">
-                                   <a href="#" target="_blank"><span class="fui-facebook"></span></a>
-                                   <a href="#" target="_blank"><span class="fui-twitter"></span></a>
+                                   <a href="{{ team.member1.facebook }}" target="_blank"><span class="fui-facebook"></span></a>
+                                   <a href="{{ team.member1.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
                                </div>
                            </div>
                            <div class="info">
-                               <div class="name">Jozsef Czapovics</div>
-                               <p>Co-founder and CEO</p>
+                               <div class="name">{{ team.member1.name }}</div>
+                               <p>{{ team.member1.title }}</p>
                            </div>
                        </div>
                    </div>
@@ -525,15 +516,15 @@
                    <div class="member-wrapper">
                        <div class="member">
                            <div class="photo-wrapper">
-                               <div class="photo"><img src="img/zsuzsa_kohanecz.jpg" alt=""></div>
+                               <div class="photo"><img src="{{ team.member2.img }}" alt=""></div>
                                <div class="overlay">
-                                   <a href="#" target="_blank"><span class="fui-facebook"></span></a>
-                                   <a href="#" target="_blank"><span class="fui-twitter"></span></a>
+                                   <a href="{{ team.member2.facebook }}" target="_blank"><span class="fui-facebook"></span></a>
+                                   <a href="{{ team.member2.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
                                </div>
                            </div>
                            <div class="info">
-                               <div class="name">Zsuzsa Kohanecz</div>
-                               <p>Co-founder and Community</p>
+                               <div class="name">{{ team.member2.name }}</div>
+                               <p>{{ team.member2.title }}</p>
                            </div>
                        </div>
                    </div>
@@ -542,15 +533,15 @@
                    <div class="member-wrapper">
                        <div class="member">
                            <div class="photo-wrapper">
-                               <div class="photo"><img src="img/peter_gonczi.jpg" alt=""></div>
+                               <div class="photo"><img src="{{ team.member3.img }}" alt=""></div>
                                <div class="overlay">
-                                   <a href="#" target="_blank"><span class="fui-facebook"></span></a>
-                                   <a href="#" target="_blank"><span class="fui-twitter"></span></a>
+                                   <a href="{{ team.member3.facebook }}" target="_blank"><span class="fui-facebook"></span></a>
+                                   <a href="{{ team.member3.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
                                </div>
                            </div>
                            <div class="info">
-                               <div class="name">Peter Gonczi</div>
-                               <p>CTO</p>
+                               <div class="name">{{ team.member3.name }}</div>
+                               <p>{{ team.member3.title }}</p>
                            </div>
                        </div>
                    </div>
@@ -561,15 +552,15 @@
                    <div class="member-wrapper">
                        <div class="member">
                            <div class="photo-wrapper">
-                               <div class="photo"><img src="img/balazs_mate.jpg" alt=""></div>
+                               <div class="photo"><img src="{{ team.member4.img }}" alt=""></div>
                                <div class="overlay">
-                                   <a href="#" target="_blank"><span class="fui-facebook"></span></a>
-                                   <a href="#" target="_blank"><span class="fui-twitter"></span></a>
+                                   <a href="{{ team.member4.facebook }}" target="_blank"><span class="fui-facebook"></span></a>
+                                   <a href="{{ team.member4.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
                                </div>
                            </div>
                            <div class="info">
-                               <div class="name">Balazs Mate</div>
-                               <p>Engineering Contributor</p>
+                               <div class="name">{{ team.member4.name }}</div>
+                               <p>{{ team.member4.title }}</p>
                            </div>
                        </div>
                    </div>
@@ -578,15 +569,15 @@
                    <div class="member-wrapper">
                        <div class="member">
                            <div class="photo-wrapper">
-                               <div class="photo"><img src="img/istvan_kiesz.jpg" alt=""></div>
+                               <div class="photo"><img src="{{ team.member5.img }}" alt=""></div>
                                <div class="overlay">
-                                   <a href="#" target="_blank"><span class="fui-facebook"></span></a>
-                                   <a href="#" target="_blank"><span class="fui-twitter"></span></a>
+                                   <a href="{{ team.member5.facebook }}" target="_blank"><span class="fui-facebook"></span></a>
+                                   <a href="{{ team.member5.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
                                </div>
                            </div>
                            <div class="info">
-                               <div class="name">Istvan Kiesz</div>
-                               <p>Engineering Contributor</p>
+                               <div class="name">{{ team.member5.name }}</div>
+                               <p>{{ team.member5.title }}</p>
                            </div>
                        </div>
                    </div>
@@ -595,15 +586,15 @@
                    <div class="member-wrapper">
                        <div class="member">
                            <div class="photo-wrapper">
-                               <div class="photo"><img src="img/walter_rivera.jpg" alt=""></div>
+                               <div class="photo"><img src="{{ team.member6.img }}" alt=""></div>
                                <div class="overlay">
-                                   <a href="#" target="_blank"><span class="fui-facebook"></span></a>
-                                   <a href="#" target="_blank"><span class="fui-twitter"></span></a>
+                                   <a href="{{ team.member6.facebook }}" target="_blank"><span class="fui-facebook"></span></a>
+                                   <a href="{{ team.member6.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
                                </div>
                            </div>
                            <div class="info">
-                               <div class="name">Walter Rivera</div>
-                               <p>Partnerships Contributor</p>
+                               <div class="name">{{ team.member6.name }}</div>
+                               <p>{{ team.member6.title }}</p>
                            </div>
                        </div>
                    </div>
@@ -613,22 +604,22 @@
    </section>
    
    
-    <section class="contacts-4">
+    <section id="contacts" class="contacts-4">
       <div class="container">
         <div class="content">
             <div class="row mid-margin">
-                <h1>GET IN TOUCH <strong>WITH US</strong></h1>
+                <h1>{{ contacts.title|raw }}</h1>
             </div>
             <div class="row mid-margin">
-                <p>We would love to know what you think<br/>feel free to contact us.</p>
+                <p>{{ contacts.description }}</p>
             </div>
             <div class="row mid-margin">
                 <div class="social-btns">
-                    <a href="https://twitter.com/hashtagcharity" target="_blank">
+                    <a href="{{ contacts.twitter }}" target="_blank">
                         <div class="fui-twitter"></div>
                         <div class="fui-twitter"></div>
                     </a>
-                    <a href="https://facebook.com/hashtagcharity" target="_blank">
+                    <a href="{{ contacts.facebook }}" target="_blank">
                         <div class="fui-facebook"></div>
                         <div class="fui-facebook"></div>
                     </a>
@@ -636,7 +627,7 @@
             </div>
             <div class="row no-margin">
                 <div class="links">
-                    <a href="mailto:info@hashtagcharity.org">INFO@HASHTAGCHARITY.ORG</a>
+                    <a href="{{ contacts.mailt.link }}">{{ contacts.mailto.label }}</a>
                 </div>
             </div>
         </div>
@@ -644,14 +635,14 @@
     </section>
    
    
-    <section class="footer-1">
+    <section id="footer" class="footer-1">
         <div class="container">
             <div class="col-xs-12">
                 <div class="img pull-left">
-                    <img src="img/logo_small.png">
+                    <img src="{{ footer.logo }}">
                 </div>
                 <div class="pull-right">
-                    <p>© 2014 #charity. All Rights Reserverd</p>
+                    <p>{{ footer.text }}</p>
                 </div>
             </div>
         </div>

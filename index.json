@@ -4,12 +4,123 @@
             "signup": "SIGN UP NOW",
             "share": "SHARE US"
         }
-
     },
 
     "header": { 
-        "title1": "VOLUNTEERING:",
-        "title2": "SOLVEDD",
+        "title": "VOLUNTEERING:<strong>SOLVED</strong>",
         "subtitle": "FIND A CAUSE YOU BELIEVE IN. PLEDGE YOUR SKILLS AND TIME. MAKE SOMEBODY'S DREAM HAPPEN"
-    } 
+    },
+    "pitch": {
+        "title": "PUT THE <strong>30 SECONDS</strong> PITCH<br/>HERE ABOUT <strong>#CHARITY</strong>",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu molestie mi, eget vehicula nibh. Aenean enim arcu, venenatis vitae commodo non, tincidunt vel sapien. Donec posuere lorem vitae lectus porttitor, vitae maximus lacus volutpat"
+    },
+    "mainthings": {
+        "title": "PUT THE <strong>3 MAIN THINGS</strong> HERE <br/>ABOUT<strong>#CHARITY</strong>",
+        "description": "Put a nice sentence here why it is different than any other charity",
+        "thing1": {
+            "title": "MAIN THING 1",
+            "description": "Details about the Main thing 1 here - in one or two sentences."
+        },
+        "thing2": {
+            "title": "MAIN THING 2",
+            "description": "Details about the Main thing 2 here - in one or two sentences."
+        },
+        "thing3": {
+            "title": "MAIN THING 3",
+            "description": "Details about the Main thing 3 here - in one or two sentences."
+        }
+    },
+    "counter": {
+        "text": "professionals already subscribed for the launch"
+    },
+    "smartmatch": {
+        "title": "SMART<strong>MATCH</strong>",
+        "description": "Put the 30 seconds pitch here. It should be very easy to understand and not too long. Put the 30 seconds pitch here. It should be very easy to understand and not too long."
+    },
+    "partners": {
+        "title": "WE ARE <strong>NOT ALONE</strong><br/>WE ALREADY HAVE <strong>GREAT PARTNERS</strong><br/>AND LOOKING FOR MORE",
+        "partner1": {
+            "name": "ACTION AGAINST HUNGER",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dolor ex. Nam arcu enim, gravida id accumsan feugiat, rutrum pulvinar nisi."
+        },
+        "partner2": {
+            "name": "ACTION AGAINST HUNGER",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dolor ex. Nam arcu enim, gravida id accumsan feugiat, rutrum pulvinar nisi."
+        },
+        "partner3": {
+            "name": "ACTION AGAINST HUNGER",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dolor ex. Nam arcu enim, gravida id accumsan feugiat, rutrum pulvinar nisi."
+        },
+        "partner4": {
+            "name": "ACTION AGAINST HUNGER",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dolor ex. Nam arcu enim, gravida id accumsan feugiat, rutrum pulvinar nisi."
+        }
+    },
+    "workinghard": {
+        "title": "<strong>WE ARE WORKING HARD</strong><br /> ON THE BEST CHARITY PLATFORM",
+        "description": "Describe that we are working hard on the product and will launch soon. Meanwhile they should subscribe so we can let them know when we launch.",
+        "emailtext": "Your emailaddress",
+        "submit": "submit",
+        "stuff": "Some stuff to elaborate on..."
+    },
+    "team": {
+        "title": "THE ENTHUSIASTIC <strong>TEAM</strong><br/>BEHIND <strong>#CHARITY</strong>",
+        "member1": {
+            "img": "img/jozsef_czapovics.jpg",
+            "facebook": "#",
+            "twitter": "#",
+            "name": "Jozsef Czapovics",
+            "title": "Co-founder and CEO"
+        },
+        "member2": {
+            "img": "img/zsuzsa_kohanecz.jpg",
+            "facebook": "#",
+            "twitter": "#",
+            "name": "Zsuzsa Kohanecz",
+            "title": "Co-Founder and Community"
+        },
+        "member3": {
+            "img": "img/peter_gonczi.jpg",
+            "facebook": "#",
+            "twitter": "#",
+            "name": "Peter Gonczi",
+            "title": "Co-Founder and CTO"
+        },
+        "member4": {
+            "img": "img/balazs_mate.jpg",
+            "facebook": "#",
+            "twitter": "#",
+            "name": "Balazs Mate",
+            "title": "Engineering Contributor"
+        },
+        "member5": {
+            "img": "img/istvan_kiesz.jpg",
+            "facebook": "#",
+            "twitter": "#",
+            "name": "Istvan Kiesz",
+            "title": "Engineering Contributor"
+        },
+        "member6": {
+            "img": "img/walter_rivera.jpg",
+            "facebook": "#",
+            "twitter": "#",
+            "name": "Walter Rivera",
+            "title": "Partnerships Contributor"
+        }
+    },
+    "contacts": {
+        "title": "GET IN TOUCH <strong>WITH US</strong>",
+        "description": "We would love to know what you think<br/>feel free to contact us.",
+        "twitter": "https://twitter.com/hashtagcharity",
+        "facebook": "https://facebook.com/hashtagcharity",
+        "mailto": {
+            "link": "mailto:info@hashtagcharity.org",
+            "label": "INFO@HASHTAGCHARITY.ORG"
+        }
+    },
+    "footer": {
+        "logo": "img/logo_small.png",
+        "text": "© 2014 #charity. All Rights Reserverd"
+    }
+    
 }

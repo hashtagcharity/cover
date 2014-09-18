@@ -12,3 +12,4 @@
 sftp-config.json
 /xcode
 node_modules/
+/index.html
