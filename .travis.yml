@@ -1,6 +1,8 @@
 language: node_js
 node_js:
 - '0.11'
+before_install: npm install -g swig
+install: swig render ./template.index.html -j ./index.json > index.html
 deploy:
   provider: s3
   access_key_id: AKIAI2O5LRFJZNIRLVBA

@@ -10,11 +10,10 @@
     "email": "CJ"
   },
   "dependencies": {
+    "swig": "^1.4.2"
   },
-  "devDependencies": {
-  },
-  "scripts": {
-  },
+  "devDependencies": {},
+  "scripts": {},
   "engines": {
     "node": "0.11.x"
   },

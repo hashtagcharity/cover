@@ -11,3 +11,4 @@
 # sftp configuration file
 sftp-config.json
 /xcode
+node_modules/
