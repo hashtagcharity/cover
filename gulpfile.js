@@ -24,7 +24,5 @@ gulp.task('templates', function() {
           .pipe(notify({ message: 'Templates task complete' }));
 });
 
-// Default task
-gulp.task('default', function() {
-    gulp.start('styles', 'templates');
-});
+gulp.task('default', ['styles', 'templates']);
+gulp.task('ci', ['default']);
