@@ -495,7 +495,7 @@
                 </div>
            </div>
            <div class="members row mid-margin">
-               <div class="col-sm-4">
+               <div class="col-sm-3">
                    <div class="member-wrapper">
                        <div class="member">
                            <div class="photo-wrapper">
@@ -512,7 +512,7 @@
                        </div>
                    </div>
                </div>
-               <div class="col-sm-4">
+               <div class="col-sm-3">
                    <div class="member-wrapper">
                        <div class="member">
                            <div class="photo-wrapper">
@@ -529,7 +529,7 @@
                        </div>
                    </div>
                </div>
-               <div class="col-sm-4">
+               <div class="col-sm-3">
                    <div class="member-wrapper">
                        <div class="member">
                            <div class="photo-wrapper">
@@ -538,7 +538,7 @@
                                    <a href="{{ team.member3.facebook }}" target="_blank"><span class="fui-facebook"></span></a>
                                    <a href="{{ team.member3.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
                                </div>
-                           </div>
+                           </div> 
                            <div class="info">
                                <div class="name">{{ team.member3.name }}</div>
                                <p>{{ team.member3.title }}</p>
@@ -546,9 +546,7 @@
                        </div>
                    </div>
                </div>
-           </div>
-           <div class="members row no-margin">
-               <div class="col-sm-4">
+               <div class="col-sm-3">
                    <div class="member-wrapper">
                        <div class="member">
                            <div class="photo-wrapper">
@@ -565,6 +563,8 @@
                        </div>
                    </div>
                </div>
+           </div>
+           <div class="members row no-margin">
                <div class="col-sm-4">
                    <div class="member-wrapper">
                        <div class="member">
@@ -595,6 +595,23 @@
                            <div class="info">
                                <div class="name">{{ team.member6.name }}</div>
                                <p>{{ team.member6.title }}</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-sm-4">
+                   <div class="member-wrapper">
+                       <div class="member">
+                           <div class="photo-wrapper">
+                               <div class="photo"><img src="{{ team.member7.img }}" alt=""></div>
+                               <div class="overlay">
+                                   <a href="{{ team.member7.facebook }}" target="_blank"><span class="fui-facebook"></span></a>
+                                   <a href="{{ team.member7.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
+                               </div>
+                           </div>
+                           <div class="info">
+                               <div class="name">{{ team.member7.name }}</div>
+                               <p>{{ team.member7.title }}</p>
                            </div>
                        </div>
                    </div>
@@ -698,51 +715,52 @@
     </script>
     
     <script>
-        // Smooth scroll for in page links
-        $(function(){
+    
+         // Smooth scroll for in page links
+        $(function() {
           var target, scroll;
-          
-          $("a[href*=#]:not([href=#])").on("click", function(e) {
-                                           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                                                                         target = $(this.hash);
-                                                                         target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
-                                                                         
-                                                                         if (target.length) {
-                                                                         if (typeof document.body.style.transitionProperty === 'string') {
-                                                                         e.preventDefault();
-                                                                         
-                                                                         var avail = $(document).height() - $(window).height();
-                                                                         
-                                                                         scroll = target.offset().top;
-                                                                         
-                                                                         if (scroll > avail) {
-                                                                         scroll = avail;
-                                                                         }
-                                                                         
-                                                                         $("html").css({
-                                                                                       "margin-top" : ( $(window).scrollTop() - scroll ) + "px",
-                                                                                       "transition" : "1s ease-in-out"
-                                                                                       }).data("transitioning", true);
-                                                                         } else {
-                                                                         $("html, body").animate({
-                                                                                                 scrollTop: scroll
-                                                                                                 }, 1000);
-                                                                         return;
-                                                                         }
-                                                                         }
-                                                                         }
-                                                                         });
-                                               
-                                               $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
-                                                            if (e.target == e.currentTarget && $(this).data("transitioning") === true) {
-                                                            $(this).removeAttr("style").data("transitioning", false);
-                                                            $("html, body").scrollTop(scroll);
-                                                            return;
-                                                            }
-                                                            });
-                                               });
 
-        
+          $("a[href*=#]:not([href=#])").on("click", function(e) {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+              target = $(this.hash);
+              target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
+
+              if (target.length) {
+                if (typeof document.body.style.transitionProperty === 'string') {
+                  e.preventDefault();
+
+                  var avail = $(document).height() - $(window).height();
+
+                  scroll = target.offset().top;
+
+                  if (scroll > avail) {
+                    scroll = avail;
+                  }
+
+                  $("html").css({
+                    "margin-top": ($(window).scrollTop() - scroll) + "px",
+                    "transition": "1s ease-in-out"
+                  }).data("transitioning", true);
+                } else {
+                  $("html, body").animate({
+                    scrollTop: scroll
+                  }, 1000);
+                  return;
+                }
+              }
+            }
+          });
+
+          $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function(e) {
+            if (e.target == e.currentTarget && $(this).data("transitioning") === true) {
+              $(this).removeAttr("style").data("transitioning", false);
+              $("html, body").scrollTop(scroll);
+              return;
+            }
+          });
+        });
+
+
     </script>
     
   </div>

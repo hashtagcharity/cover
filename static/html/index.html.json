@@ -87,25 +87,32 @@
             "title": "Co-Founder and CTO"
         },
         "member4": {
+            "img": "img/walter_rivera.jpg",
+            "facebook": "#",
+            "twitter": "#",
+            "name": "Walter Rivera",
+            "title": "Partnerships Contributor"
+        },
+        "member5": {
             "img": "img/balazs_mate.jpg",
             "facebook": "#",
             "twitter": "#",
             "name": "Balazs Mate",
             "title": "Engineering Contributor"
         },
-        "member5": {
+        "member6": {
             "img": "img/istvan_kiesz.jpg",
             "facebook": "#",
             "twitter": "#",
             "name": "Istvan Kiesz",
             "title": "Engineering Contributor"
         },
-        "member6": {
-            "img": "img/walter_rivera.jpg",
+        "member7": {
+            "img": "img/norbert_kovacs.jpg",
             "facebook": "#",
             "twitter": "#",
-            "name": "Walter Rivera",
-            "title": "Partnerships Contributor"
+            "name": "Norbert Kovacs",
+            "title": "Engineering Contributor"
         }
     },
     "contacts": {

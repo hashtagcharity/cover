@@ -43,7 +43,7 @@ var files = {
   video: base_dir + '/video/**/*',
   templates: base_dir + '/static/html/**/*.html',
   template_text: base_dir + '/static/html/**/*.json',
-  less: base_dir + '/static/less/**/*.less'
+  less: [base_dir + '/static/less/**/*.less', base_dir + '/less-files/*.less']
 };
 
 
@@ -64,7 +64,7 @@ gulp.task('reload', ['build'], function() {
 
 gulp.task('watch', ['connect'], function() { 
   var watched = [
-    files.js, files.less, files.templates, files.template_text
+    files.js, files.less[0], files.less[1], files.templates, files.template_text
   ];
 
   gulp.watch(watched, ['reload']);
