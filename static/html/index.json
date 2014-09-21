@@ -33,6 +33,20 @@
     "counter": {
         "text": "professionals already subscribed for the launch"
     },
+    "steps": {
+        "step1": {
+            "title": "OPEN A PROJECT",
+            "description": "It all starts with a great charity idea. Put here what kind of ideas we talk about and how easy to create it on our site. Emphasize that they should describe the skills they need - but could start without it as well, we will help."
+        },
+        "step2": {
+            "title": "MATCH THE SKILLS",
+            "description": "We match the projects wth contributors with the proper skills. Describe here why it is more efficient than anything else. Why is it good for project owner and why it is good for contributors."
+        },
+        "step3": {
+            "title": "WORK TOGETHER",
+            "description": "Put here that we will support the execution too. Describe why it is important and that we ensure Collboration, Reposiotry management, Storage and Social network tools."
+        }
+    },
     "smartmatch": {
         "title": "SMART<strong>MATCH</strong>",
         "description": "Put the 30 seconds pitch here. It should be very easy to understand and not too long. Put the 30 seconds pitch here. It should be very easy to understand and not too long."
