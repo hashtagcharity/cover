@@ -27,7 +27,10 @@
   <link rel="stylesheet" href="startup/common-files/css/animations.css">
   <link rel="stylesheet" href="static/css/style.css">
 
-  <title></title>
+  <!-- site animation -->
+  <link rel="stylesheet" href="static/css/animate.css">
+
+  <title># c h a r i t y</title>
 </head>
 
 <body data-campaign-url="http://new.hashtagcharity.org/?utm_medium=socialmedia&utm_campaign=2014_subscribe">
@@ -76,7 +79,9 @@
     <section id="pitch" class="content-8">
         <div class="container">
             <div class="row mid-margin">
-                <div class="circle-full-big"></div>
+              <div class="wow flipInX">
+                  <div class="circle-full-big"></div>
+              </div>
             </div>
             <div class="row mid-margin">
                 <div class="col-sm-12">
@@ -113,9 +118,8 @@
             </div>
         </div>
         
-        <div class="row features">
-            
-          <div class="col-sm-4">
+        <div class="row features">           
+          <div class="col-sm-4 wow flipInX">
             <div class="row low-margin">
                     <div class="circle-full-medium"></div>
             </div>
@@ -133,7 +137,7 @@
             </div>
           </div>
           
-          <div class="col-sm-4">
+          <div class="col-sm-4 wow flipInX" data-wow-offset="200">
               <div class="row low-margin">
                       <div class="circle-full-medium"></div>
               </div>
@@ -151,7 +155,7 @@
               </div>
           </div>
           
-          <div class="col-sm-4">
+          <div class="col-sm-4 wow flipInX" data-wow-offset="200">
               <div class="row low-margin">
                       <div class="circle-full-medium"></div>
               </div>
@@ -622,6 +626,18 @@
     <script src="startup/common-files/js/froogaloop.min.js"></script>
     <script src="startup/common-files/js/startup-kit.js"></script>
     <script src="js/social.js"></script>
+
+    <script src="js/WOW.min.js"></script>
+
+    <script>
+      new WOW(
+        {
+          boxClass:     'wow',      
+          animateClass: 'animated', 
+          offset:       200 
+        }
+      ).init();
+    </script>
 
     <script>
         // parallax effect for the "We are working hard" section
