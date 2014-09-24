@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="startup/common-files/css/icon-font.css">
   <!-- end -->
   <link rel="stylesheet" href="startup/common-files/css/animations.css">
+  <link rel="stylesheet" href="static/css/sharrre.css">
+
   <link rel="stylesheet" href="static/css/style.css">
 
   <!-- site animation -->
@@ -35,7 +37,7 @@
 
 <body data-campaign-url="http://new.hashtagcharity.org/?utm_medium=socialmedia&amp;utm_campaign=2014_subscribe">
       <div id="sidebar">
-        <h4>testbar</h4>
+        <h4>test</h4>
       </div>
   <div class="page-wrapper">
       <header class="header-23">
@@ -44,7 +46,7 @@
         </div>
       </header>
 
-        <section class="header-23-sub">
+        <section id="header" class="header-23-sub">
             <div id="bgVideo" class="background">&nbsp;</div>
             <div class="container">
                   <div class="row mid-margin">
@@ -617,90 +619,13 @@
     <script src="startup/common-files/js/jquery.backgroundvideo.min.js"></script>
     <script src="startup/common-files/js/froogaloop.min.js"></script>
     <script src="startup/common-files/js/startup-kit.js"></script>
+    
+    <script src="js/waypoints.min.js"></script> 
     <script src="js/social.js"></script>
-
     <script src="js/WOW.min.js"></script>
-
-    <script>
-      new WOW(
-        {
-          boxClass:     'wow',      
-          animateClass: 'animated', 
-          offset:       200 
-        }
-      ).init();
-    </script>
-
-    <script>
-        // parallax effect for the "We are working hard" section
-        (function($){
-         $('.content-36').each(function(){
-                $(this).parallax('50%', 0.3, true);
-            });
-         })(jQuery);
-         (function($){
-          $('.counter-1').each(function(){
-                $(this).parallax('50%', 0.3, true);
-            });
-          })(jQuery);
-    </script>
-
-    <script>
-      // conversion tracking
-      $('.btn-submit').click(function(e) {
-        ga('send', 'event', 'subscribe', 'click');
-      });
-    </script>
     
-    <script>
+    <script src="js/main.js"></script>
 
-         // Smooth scroll for in page links
-        $(function() {
-          var target, scroll;
-
-          $("a[href*=#]:not([href=#])").on("click", function(e) {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-              target = $(this.hash);
-              target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
-
-              if (target.length) {
-                if (typeof document.body.style.transitionProperty === 'string') {
-                  e.preventDefault();
-
-                  var avail = $(document).height() - $(window).height();
-
-                  scroll = target.offset().top;
-
-                  if (scroll > avail) {
-                    scroll = avail;
-                  }
-
-                  $("html").css({
-                    "margin-top": ($(window).scrollTop() - scroll) + "px",
-                    "transition": "1s ease-in-out"
-                  }).data("transitioning", true);
-                } else {
-                  $("html, body").animate({
-                    scrollTop: scroll
-                  }, 1000);
-                  return;
-                }
-              }
-            }
-          });
-
-          $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function(e) {
-            if (e.target == e.currentTarget && $(this).data("transitioning") === true) {
-              $(this).removeAttr("style").data("transitioning", false);
-              $("html, body").scrollTop(scroll);
-              return;
-            }
-          });
-        });
-
-
-    </script>
-    
   </div>
 </body>
 
