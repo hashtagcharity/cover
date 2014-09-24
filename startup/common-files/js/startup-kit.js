@@ -619,34 +619,9 @@ startupKit.uiKitHeader.header23 = function() {
     startupKit.attachBgVideo();
     startupKit.uiKitHeader._inFixedMode('.header-23');
 
-    $('body').prepend($('.mask, .popup-video').not('pre .mask, pre .popup-video'));
-    $('header-23 .mask, header-23 .popup-video').not('pre .mask, pre .popup-video').detach();
+    $('body').prepend($('.mask').not('pre .mask'));
+    $('header-23 .mask').not('pre .mask').detach();
 
-    var iframe = $('#pPlayer')[0];
-    var player = $f(iframe);
-    player.addEvent('ready', function() {});
-
-    function addEvent(element, eventName, callback) {
-        if (element.addEventListener) {
-            element.addEventListener(eventName, callback, false);
-        } else {
-            element.attachEvent(eventName, callback, false);
-        }
-    }
-
-    $('#play').on('click', function(evt) {
-        evt.preventDefault();
-        $('.popup-video').addClass('shown');
-        $('.popup-video, .mask').fadeIn('slow', function() {
-            player.api('play')
-        });
-        $('.mask').on('click', function() {
-            player.api('pause');
-            $('.popup-video, .mask').fadeOut('slow', function() {
-                $('.popup-video').removeClass('shown');
-            });
-        });
-    });
 };
 
 var isMobile = {
