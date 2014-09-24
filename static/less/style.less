@@ -114,19 +114,29 @@ p:extends(.p) {
 }
 
 .circle-full-big {
-    .circle-full(330px);
+    .circle-full(@big-image-size);
 }
 
 .circle-full-medium {
-    .circle-full(270px);
+    .circle-full(@medium-image-size);
 }
 
 .circle-full-small {
-    .circle-full(170px);
+    .circle-full(@small-image-size);
 }
 
 .page-wrapper > section {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgba(229, 229, 229, 1);
+}
+
+.picto {
+  .img {
+    img {
+      width: @medium-image-size;
+      height: @medium-image-size;
+    }
+    .centering;
+  }
 }
