@@ -115,13 +115,20 @@
             "title": "Engineering Contributor"
         },
         "member6": {
+            "img": "img/imre_fazekas.jpg",
+            "facebook": "#",
+            "twitter": "#",
+            "name": "Imre Fazekas",
+            "title": "Engineering Contributor"
+        },
+        "member7": {
             "img": "img/istvan_kiesz.jpg",
             "facebook": "#",
             "twitter": "#",
             "name": "Istvan Kiesz",
             "title": "Engineering Contributor"
         },
-        "member7": {
+        "member8": {
             "img": "img/norbert_kovacs.jpg",
             "facebook": "#",
             "twitter": "#",
