@@ -10,8 +10,9 @@
 
 # sftp configuration file
 sftp-config.json
-/xcode
+xcode/
 node_modules/
-/index.html
+index.html
 dist
+
 static/css/style.css

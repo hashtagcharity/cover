@@ -8,7 +8,8 @@
 
     "header": { 
         "title": "VOLUNTEER YOUR <strong>SKILLS</strong>",
-        "subtitle": ""
+        "emailtext": "Email address",
+        "submit": "NOTIFY ME"
     },
     "pitch": {
         "title": "FIND A <strong>CAUSE. </strong>PLEDGE YOUR <strong>SKILLS.<br/></strong>MAKE A <strong>DIFFERENCE.</strong>",
@@ -69,13 +70,6 @@
             "name": "ACTION AGAINST HUNGER",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dolor ex. Nam arcu enim, gravida id accumsan feugiat, rutrum pulvinar nisi."
         }
-    },
-    "workinghard": {
-        "title": "<strong>WE ARE WORKING HARD</strong><br /> ON THE BEST CHARITY PLATFORM",
-        "description": "Describe that we are working hard on the product and will launch soon. Meanwhile they should subscribe so we can let them know when we launch.",
-        "emailtext": "Your emailaddress",
-        "submit": "submit",
-        "stuff": "Some stuff to elaborate on..."
     },
     "team": {
         "title": "THE ENTHUSIASTIC <strong>TEAM</strong><br/>BEHIND <strong>#CHARITY</strong>",

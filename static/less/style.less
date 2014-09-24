@@ -12,6 +12,7 @@
 
 @import '../../less-files/section3.less';
 @import '../../less-files/header-23.less';
+//@import '../../less-files/header-1.less';
 @import '../../less-files/content-8.less';
 @import '../../less-files/counter-1.less';
 @import '../../less-files/content-31.less';
@@ -114,19 +115,36 @@ p:extends(.p) {
 }
 
 .circle-full-big {
-    .circle-full(330px);
+    .circle-full(@big-image-size);
 }
 
 .circle-full-medium {
-    .circle-full(270px);
+    .circle-full(@medium-image-size);
 }
 
 .circle-full-small {
-    .circle-full(170px);
+    .circle-full(@small-image-size);
 }
 
 .page-wrapper > section {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgba(229, 229, 229, 1);
+}
+
+.picto {
+  .img {
+    img {
+      width: @medium-image-size;
+      height: @medium-image-size;
+    }
+    .centering;
+  }
+}
+
+#sidebar { 
+  width: 190px; 
+  position: fixed; 
+  margin-left: 10px;
+  z-index: 1000;
 }

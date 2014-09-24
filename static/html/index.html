@@ -33,54 +33,74 @@
   <title># c h a r i t y</title>
 </head>
 
-<body data-campaign-url="http://new.hashtagcharity.org/?utm_medium=socialmedia&utm_campaign=2014_subscribe">
-  <div class="page-wrapper">
-    <header class="header-23">
-      <div class="mask">&nbsp;</div>
-      <div class="popup-video">
-          <iframe id="pPlayer" src="http://player.vimeo.com/video/80282064?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;player_id=pPlayer" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<body data-campaign-url="http://new.hashtagcharity.org/?utm_medium=socialmedia&amp;utm_campaign=2014_subscribe">
+      <div id="sidebar">
+        <h4>testbar</h4>
       </div>
-    </header>
-
-
-    <section id="header" class="header-23-sub bg-midnight-blue">
-      <div id="bgVideo" class="background">&nbsp;</div>
-      <div class="container">
-          <div class="row mid-margin">
-            <div class="col-sm-12">
-              <div class="img">
-                <img src="img/charity_logo.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="row low-margin">
-            <div class="col-sm-12">
-                <h1>{{ header.title|raw }}</h1>
-            </div>
-          </div>
-
-          <div class="row mid-margin">
-            <div class="col-sm-12">
-              <h2>{{ header.subtitle }}</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <a class="btn btn-large btn-signup" href="#workinghard">{{ common.button.signup }}</a>
-            </div>
-            <div class="col-sm-6">
-              <a class="btn btn-large btn-share" href="#sharebuttons">{{ common.button.share }}</a>
-            </div>
-          </div>
+  <div class="page-wrapper">
+      <header class="header-23">
+        <div class="container">
+        <div class="mask">&nbsp;</div>
+        <div class="popup-video">
+          <iframe id="pPlayer" src="http://player.vimeo.com/video/80282064?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;player_id=pPlayer" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
-    </section>
-    
+      </header>
+
+        <section class="header-23-sub">
+            <div id="bgVideo" class="background">&nbsp;</div>
+            <div class="container">
+                  <div class="row mid-margin">
+                    <div class="col-sm-12">
+                      <div class="img">
+                        <img src="img/charity_logo.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mid-margin">
+                    <div class="col-xs-8 col-xs-offset-2">
+                      <h1>{{ header.title|raw }}</h1>
+                    </div>
+                  </div> 
+                  <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3">
+                      <div class="submit">
+                        <input type="text" placeholder="{{ header.emailtext }}" spellcheck="false">
+                        <a class="btn btn-large btn-submit" href="#">{{ header.submit }}</a>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="row no-margin">
+                    <div class="col-md-12">
+                        <div id="sharebuttons" class="row">
+                            
+                            <div class="col-xs-2 col-xs-offset-2">
+                                <a class="btn btn-large facebook-share track-social" data-social-platform="facebook"></a>
+                            </div>
+                            <div class="col-xs-2">
+                                <a class="btn btn-large twitter-share track-social" data-social-platform="twitter" data-share-text="Pros who care" data-share-url="http://bit.ly/1tGlhvF" data-share-hashtags="charity, volunteering"></a>
+                            </div>
+                            <div class="col-xs-2">
+                                <a class="btn btn-large linkedin-share track-social" data-social-platform="linkedin" data-share-title="#charity" data-share-summary="Pros who care..." data-share-source="http://hashtagcharity.org"></a>
+                            </div>
+                            <div class="col-xs-2">
+                                <a class="btn btn-large googleplus-share track-social" data-social-platform="googleplus"></a>
+                            </div>
+                            <div class="col-xs-2">
+                                <a class="btn btn-large pinterest-share track-social" data-social-platform="pinterest" data-share-media="https://pbs.twimg.com/profile_images/476837647415910400/VbbEdYvs.png" data-share-description="Pros who care: subscribe and get notified #charity #volunteering"></a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </section> 
     
     <section id="pitch" class="content-8">
         <div class="container">
             <div class="row mid-margin">
-              <div class="wow flipInX">
-                  <div class="circle-full-big"></div>
+              <div class="wow flipInX picto">
+                <div class="img">
+                  <img src="img/pict/pict1.png" alt="">
+                </div>
               </div>
             </div>
             <div class="row mid-margin">
@@ -89,11 +109,9 @@
                 </div>
             </div>
             <div class="row no-margin">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-8">
+                <div class="col-sm-8 col-sm-offset-2">
                     <p>{{ pitch.description }}</p>
                 </div>
-                <div class="col-sm-2"></div>
             </div>
         </div>
     </section>
@@ -115,8 +133,10 @@
         
         <div class="row features">           
           <div class="col-sm-4 wow flipInX">
-            <div class="row low-margin">
-                    <div class="circle-full-medium"></div>
+            <div class="row low-margin picto">
+              <div class="img">
+                <img src="img/pict/pict_skills1.png" alt="">
+              </div>
             </div>
             
             <div class="row low-margin">
@@ -133,8 +153,10 @@
           </div>
           
           <div class="col-sm-4 wow flipInX" data-wow-offset="200">
-              <div class="row low-margin">
-                      <div class="circle-full-medium"></div>
+              <div class="row low-margin picto">
+                <div class="img">
+                  <img src="img/pict/pict_dino.png" alt="">
+                </div>
               </div>
               
               <div class="row low-margin">
@@ -151,8 +173,10 @@
           </div>
           
           <div class="col-sm-4 wow flipInX" data-wow-offset="200">
-              <div class="row low-margin">
-                      <div class="circle-full-medium"></div>
+              <div class="row low-margin picto">
+                <div class="img">
+                  <img src="img/pict/pict_snail.png" alt="">
+                </div>
               </div>
               
               <div class="row low-margin">
@@ -194,8 +218,10 @@
         <div class="container">
             <div class="row mid-margin">
                 <div class="number">1</div>
-                <div class="col-sm-6 col-sm-offset-1">
-                  <div class="circle-full-medium"></div>
+                <div class="col-sm-6 col-sm-offset-1 picto">
+                  <div class="img">
+                    <img src="img/pict/pict_project.png" alt="">        
+                  </div>
                 </div>
                 <div class="col-sm-5 pad-fifty">
                     <div class="row low-margin">
@@ -212,8 +238,10 @@
             </div>          
             <div class="row mid-margin">
                 <div class="number">2</div>
-                <div class="col-sm-6 col-sm-offset-1">
-                  <div class="circle-full-medium"></div>
+                <div class="col-sm-6 col-sm-offset-1 picto">
+                  <div class="img">
+                    <img src="img/pict/pict_skills.png" alt="">                          
+                  </div>
                 </div>
                 <div class="col-sm-5 pad-fifty">
                     <div class="row low-margin">
@@ -230,8 +258,10 @@
             </div>
             <div class="row">
                 <div class="number">3</div>
-                <div class="col-sm-6 col-sm-offset-1">
-                  <div class="circle-full-medium"></div>
+                <div class="col-sm-6 col-sm-offset-1 picto">
+                  <div class="img">
+                    <img src="img/pict/pict_sponge.png" alt="">        
+                  </div> 
                 </div>
                 <div class="col-sm-5 pad-fifty">
                     <div class="row low-margin">
@@ -262,8 +292,10 @@
             </div>
           </div>
           <div class="row no-margin">
-              <div class="col-sm-4 col-sm-offset-4">
-                  <div class="circle-full-big"></div>
+              <div class="col-sm-4 col-sm-offset-4 picto">
+                  <div class="img">
+                    <img src="img/pict/pict_smart.png" alt="">        
+                  </div> 
               </div>
           </div>
 
@@ -281,8 +313,10 @@
            
            <div class="row features">
                <div class="col-sm-3">
-                   <div class="row mid-margin">
-                       <div class="circle-full-small"></div>
+                   <div class="row mid-margin picto">
+                    <div class="img">
+                      <img src="img/pict/pict_partners.png" alt="">        
+                    </div> 
                    </div>
                    
                    <div class="row low-margin">
@@ -299,8 +333,10 @@
                </div>
                
                <div class="col-sm-3">
-                   <div class="row mid-margin">
-                       <div class="circle-full-small"></div>
+                   <div class="row mid-margin picto">
+                    <div class="img">
+                      <img src="img/pict/pict_partners.png" alt="">        
+                    </div> 
                    </div>
                    
                    <div class="row low-margin">
@@ -317,8 +353,10 @@
                </div>
                
                <div class="col-sm-3">
-                   <div class="row mid-margin">
-                       <div class="circle-full-small"></div>
+                   <div class="row mid-margin picto">
+                    <div class="img">
+                      <img src="img/pict/pict_partners.png" alt="">        
+                    </div> 
                    </div>
                    
                    <div class="row low-margin">
@@ -335,8 +373,10 @@
                </div>
                
                <div class="col-sm-3">
-                   <div class="row mid-margin">
-                       <div class="circle-full-small"></div>
+                   <div class="row mid-margin picto">
+                    <div class="img">
+                      <img src="img/pict/pict_partners.png" alt="">        
+                    </div> 
                    </div>
                    
                    <div class="row low-margin">
