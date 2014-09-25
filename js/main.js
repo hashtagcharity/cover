@@ -74,3 +74,27 @@
           });
 
 })(jQuery);
+
+$('#demo1').sharrre({
+  share: {
+    googlePlus: true,
+    facebook: true,
+    twitter: true,
+    linkedin: true,
+    pinterest: true
+  },
+  buttons: {
+    googlePlus: {size: 'tall', annotation:'bubble'},
+    facebook: {layout: 'box_count', action: 'like'},
+    twitter: {count: '', hashtags: 'charity'},
+    linkedin: {}
+  },
+  enableCounter: false,
+  hover: function(api, options){
+    $(api.element).find('.buttons').show();
+  },
+  hide: function(api, options){
+    $(api.element).find('.buttons').hide();
+  },
+  enableTracking: true
+});
