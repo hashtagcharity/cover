@@ -1,0 +1,48 @@
+#to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 1000;
+
+
+    a {
+        display: block;
+        text-align: center;
+        font-family: @Montserrat;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #bbb;
+
+        /* transition */
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        transition: 1s;        
+    
+        &:hover {
+            color: #000;
+        }
+        &:hover span {
+            background-color: #777;
+        }
+    }
+
+    span {
+        width: 48px;
+        height: 48px;
+        display: block;
+        background: #ddd url('../../img/up-arrow.png') no-repeat center center;
+        background-size: 38px;
+
+        /* rounded corners */
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+
+
+        /* transition */
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        transition: 1s;
+    }
+
+}

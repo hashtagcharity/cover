@@ -23,6 +23,7 @@
 @import 'variables.less';
 @import 'margins.less';
 @import 'share.less';
+@import 'back-to-top.less';
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
@@ -143,7 +144,6 @@ p:extends(.p) {
 
 #sidebar { 
   width: 190px;
-  height: 200px; 
   position: fixed; 
   top: 30%;
   margin-left: 10px;  
@@ -153,6 +153,10 @@ p:extends(.p) {
   .sharebuttons {
     a {
       background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    & > div {
+      margin-top: 5px;
     }
   }
 }
