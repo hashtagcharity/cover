@@ -21,8 +21,8 @@
 @import '../../less-files/footer-1.less';
 
 @import 'variables.less';
-@import 'sharrre.less';
 @import 'margins.less';
+@import 'share.less';
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
@@ -142,10 +142,17 @@ p:extends(.p) {
 }
 
 #sidebar { 
-  width: 190px; 
+  width: 190px;
+  height: 200px; 
   position: fixed; 
-  top: 50%;
+  top: 30%;
   margin-left: 10px;  
   z-index: 1000;
   display: none;
+
+  .sharebuttons {
+    a {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
 }
