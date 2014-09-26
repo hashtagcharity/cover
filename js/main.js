@@ -13,9 +13,9 @@
     ga('send', 'event', 'subscribe', 'click');
   });
 
-  $('#counter').each(function() {
-    $(this).parallax('50%', 0.3, true);
-  });
+//  $('#counter').each(function() {
+//    $(this).parallax('50%', 0.3, true);
+//  });
 
   $('#to-top').hide();
   $('#sidebar').hide();
@@ -37,8 +37,15 @@
 
     $('#fullpage').fullpage({
       navigation: true,
-      navigationPosition: 'right'
-
+      navigationPosition: 'right',
+      afterLoad: function(anchorLink, index){
+        if (index == '2') {
+          $('#sidebar').fadeIn();
+        }
+        if (index == '1') {
+          $('#sidebar').fadeOut();
+        }
+      }
     });
 
 })(jQuery);
