@@ -146,16 +146,28 @@ p:extends(.p) {
 }
 
 #sidebar { 
-  width: 190px;
+  width: 100%;
   position: fixed; 
   top: 30%;
-  margin-left: 10px;  
   z-index: 1000;
   display: none;
 
+  .opener {
+
+    &>img {
+      &:hover {
+        .sharebuttons a {
+          .opacity(100);
+        }
+      }      
+    }
+  }
+
   .sharebuttons {
     a {
-      background-color: rgba(0, 0, 0, 0.5);
+      .opacity(0);
+      .transition(opacity .4s);
+      background-color: rgba(10, 10, 10, 0.5);
     }
 
     & > div {

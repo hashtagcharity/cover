@@ -977,7 +977,7 @@ startupKit.uiKitContent.content30 = function() {
 startupKit.uiKitContent.content31 = function() {
     (function(el) {
         $(window).scroll(function() {
-            if ($(window).width() > 480) {
+            if ($(window).width() > 5480) {
                 $('.row', el).each(function(idx) {
                     if ($(window).scrollTop() >= ($(this).offset().top - $(window).height() + $(window).height() / 2 + 100)) {
                         $(this).addClass('active');
