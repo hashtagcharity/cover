@@ -23,10 +23,8 @@
   $('#pitch').waypoint(function(direction) {
     if (direction === 'down') {
       $('#sidebar').fadeIn();
-      $('#to-top').fadeIn();
     } else {
       $('#sidebar').fadeOut();
-      $('#to-top').fadeOut();
     }
   });
 
@@ -36,6 +34,12 @@
     }, 1000);
     return false;
   });
+
+    $('#fullpage').fullpage({
+      navigation: true,
+      navigationPosition: 'right'
+
+    });
 
 })(jQuery);
 
