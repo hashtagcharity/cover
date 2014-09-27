@@ -30,10 +30,19 @@
     }
   });
 
+  var $root = $('html, body');
+
   $('#to-top a').click(function() {
-    $('body,html').animate({
+    $root.animate({ 
       scrollTop: 0
     }, 1000);
+    return false;
+  });
+
+  $('#header-bottom').click(function() {
+    $root.animate({ 
+      scrollTop: $('#pitch').offset().top 
+    }, 800);
     return false;
   });
 
