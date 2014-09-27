@@ -13,10 +13,6 @@
     ga('send', 'event', 'subscribe', 'click');
   });
 
-  $('#counter').each(function() {
-    $(this).parallax('50%', 0.3, true);
-  });
-
   $('#to-top').hide();
   $('#sidebar').hide();
 
@@ -44,6 +40,22 @@
       scrollTop: $('#pitch').offset().top 
     }, 800);
     return false;
+  });
+
+  $('#notifyme').click(function() {
+    var $emailaddress = $('#emailaddress');
+    $.post("http://localhost:8080/saywhat",
+        {
+            email: $emailaddress.val()
+        },
+        function(data, textStatus, jqXHR)
+        {
+            //data - response from server
+        }).fail(function(jqXHR, textStatus, errorThrown) 
+        {
+            alert($emailaddress.val() + ": " + textStatus);
+            $emailaddress.val('');
+        })
   });
 
 })(jQuery);
