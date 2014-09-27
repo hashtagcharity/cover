@@ -2,10 +2,12 @@
   width: 50px;
   height: 50px;
   border-radius: 50px;
+  border: 1px solid #fff;
   background-color: rgba(0, 0, 0, 0.0);
   background-image: url(@bg-image);
-  background-size: 50px 50px;
+  background-size: 20px 18px;
   background-repeat: no-repeat;
+  background-position: center;
   &:hover, &:focus, &:active, &.active {
     background-image: url(@bg-image);
     background-color: rgba(@r, @g, @b, 0.9);
@@ -20,22 +22,17 @@
     display: table;
   }
   .facebook-share {
-    .share-base('@{img}/share_facebook.png', 59, 89, 152);
+    .share-base('@{img}/soc/soc_facebook.png', 59, 89, 152);
+    background-size: 10px 19px; 
   }
   .twitter-share {
-    .share-base('@{img}/share_twitter.png', 64, 153, 255);
+    .share-base('@{img}/soc/soc_twitter.png', 64, 153, 255);
   }
   .linkedin-share {
-    .share-base('@{img}/share_linkedin.png', 0, 123, 182);
-  }
-  .googleplus-share {
-    .share-base('@{img}/share_google.png', 221, 75, 57);
-  }
-  .pinterest-share {
-    .share-base('@{img}/share_pinterest.png', 203, 32, 39);
+    .share-base('@{img}/soc/soc_linkedin.png', 0, 123, 182);
   }
  .reddit-share {
-    .share-base('@{img}/share_pinterest.png', 206, 227, 248);
+    .share-base('@{img}/soc/soc_reddit.png', 206, 227, 248);
   }
 
 }
@@ -57,7 +54,6 @@
 
         div[class*='-share'] {
           .opacity(20);
-          display: table-cell;
         }
       }
     }
@@ -72,22 +68,24 @@
     .button-holder {
       width: 100%;
       height: 100%;
-
       background-color: @lead-color;
+      .btn {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 5px;
+      }
     }
 
     div[class*='-share'] {
-      background-image: none;
       display: none;
       vertical-align: middle;
       text-align: center;
-      .opacity(0);
-      
-      & > img {
-        width: 15px;
-        height: 14px;
+      .opacity(0); 
+  
+      a {
+        border: none;
       }
-
+  
       &:hover, &:focus, &:active, &.active {
         background-color: @lead-color;
         .opacity(100);
