@@ -18,10 +18,10 @@
 
   $('#pitch').waypoint(function(direction) {
     if (direction === 'down') {
-      $('#sidebar').fadeIn();
+//      $('#sidebar').fadeIn();
       $('#to-top').fadeIn();
     } else {
-      $('#sidebar').fadeOut();
+//      $('#sidebar').fadeOut();
       $('#to-top').fadeOut();
     }
   });
