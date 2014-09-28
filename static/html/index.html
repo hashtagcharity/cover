@@ -136,18 +136,18 @@
         <div class="container">
             <div class="row mid-margin">
               <div class="picto">
-                <div class="img wow bounceIn">
+                <div class="img wow fadeIn">
                   <img src="img/pict/pict1.png" alt="">
                 </div>
               </div>
             </div>
-            <div class="wow bounceIn">
+            <div class="wow fadeIn">
               <div class="row mid-margin wow fadeIn">
                   <div class="col-sm-12">
                       <h1>{{ pitch.title|raw }}</h1>
                   </div>
               </div>
-              <div class="row no-margin">
+              <div class="row no-margin" data-wow-delay="1s" data-wow-offset="0">
                   <div class="col-sm-8 col-sm-offset-2">
                       <p>{{ pitch.description }}</p>
                   </div>
@@ -260,12 +260,12 @@
     <section id="steps" class="content-31">
         <div class="container">
             <div class="row mid-margin">
-              <div class="col-xs-5 col-xs-offset-1">
+              <div class="col-xs-5 col-xs-offset-1 wow fadeInLeft">
                   <div class="img">
                     <img src="img/pict/pict_project.png" alt="">        
                   </div>
               </div>
-              <div class="col-xs-5">
+              <div class="col-xs-5 wow fadeInRight">
                   <div class="row low-margin">
                     <div class="col-xs-12">
                       <h3>{{ steps.step1.title }}</h3>                    
@@ -280,7 +280,7 @@
             </div> 
 
             <div class="row mid-margin">
-              <div class="col-xs-5 col-xs-offset-1">
+              <div class="col-xs-5 col-xs-offset-1 wow fadeInLeft">
                   <div class="row low-margin">
                     <div class="col-xs-12">
                       <h3>{{ steps.step2.title }}</h3>                    
@@ -292,7 +292,7 @@
                     </div>
                   </div>
               </div>
-              <div class="col-xs-5">
+              <div class="col-xs-5 wow fadeInRight">
                   <div class="img">
                     <img src="img/pict/pict_skills.png" alt="">                          
                   </div>
@@ -300,12 +300,12 @@
             </div> 
 
             <div class="row no-margin">
-               <div class="col-xs-5 col-xs-offset-1">
+               <div class="col-xs-5 col-xs-offset-1 wow fadeInLeft">
                     <div class="img">
                       <img src="img/pict/pict_sponge.png" alt="">        
                     </div>
                 </div>
-                <div class="col-xs-5">
+                <div class="col-xs-5 wow fadeInRight">
                     <div class="row low-margin">
                       <div class="col-xs-12">
                         <h3>{{ steps.step3.title }}</h3>                    
