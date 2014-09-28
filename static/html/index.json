@@ -132,7 +132,7 @@
     },
     "contacts": {
         "title": "GET IN TOUCH <strong>WITH US</strong>",
-        "description": "We would love to know what you think<br/>feel free to contact us.",
+        "description": "",
         "twitter": "https://twitter.com/hashtagcharity",
         "facebook": "https://facebook.com/hashtagcharity",
         "mailto": {
