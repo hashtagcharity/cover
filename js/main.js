@@ -2,7 +2,7 @@
   new WOW({
     boxClass: 'wow',
     animateClass: 'animated',
-    offset: 200
+    offset: 100
   }).init();
 })();
 
