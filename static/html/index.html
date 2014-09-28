@@ -147,7 +147,7 @@
                       <h1>{{ pitch.title|raw }}</h1>
                   </div>
               </div>
-              <div class="row no-margin" data-wow-delay="1s" data-wow-offset="0">
+              <div class="row no-margin" data-wow-delay="2s">
                   <div class="col-sm-8 col-sm-offset-2">
                       <p>{{ pitch.description }}</p>
                   </div>
@@ -175,7 +175,7 @@
         
         <div class="row features">           
         
-          <div class="col-sm-4 wow bounceIn" data-wow-delay="0.3s">
+          <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
             <div class="row low-margin picto">
               <div class="img">
                 <img src="img/pict/pict_skills1.png" alt="">
@@ -195,7 +195,7 @@
             </div>
           </div>
           
-          <div class="col-sm-4 wow bounceIn" data-wow-delay="0.8s">
+          <div class="col-sm-4 wow fadeIn" data-wow-delay="0.8s">
               <div class="row low-margin picto">
                 <div class="img">
                   <img src="img/pict/pict_dino.png" alt="">
@@ -215,7 +215,7 @@
               </div>
           </div>
           
-          <div class="col-sm-4 wow bounceIn" data-wow-delay="1.3s">
+          <div class="col-sm-4 wow fadeIn" data-wow-delay="1.3s">
               <div class="row low-margin picto">
                 <div class="img">
                   <img src="img/pict/pict_snail.png" alt="">
@@ -324,17 +324,19 @@
     
     <section id="smartmatch" class="content-8">
         <div class="container">
+          <div class="wow fadeIn">
             <div class="row mid-margin">
                 <div class="col-sm-12">
                     <h1>{{ smartmatch.title|raw }}</h1>
                 </div>
             </div>
-          <div class="row mid-margin">
-            <div class="col-sm-6 col-sm-offset-3">
-                <p>{{ smartmatch.description }}</p>
+            <div class="row mid-margin">
+              <div class="col-sm-6 col-sm-offset-3">
+                  <p>{{ smartmatch.description }}</p>
+              </div>
             </div>
           </div>
-          <div class="row no-margin">
+          <div class="row no-margin wow fadeIn">
               <div class="col-sm-4 col-sm-offset-4 picto">
                   <div class="img">
                     <img src="img/pict/pict_smart.png" alt="">        
