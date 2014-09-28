@@ -44,9 +44,9 @@
 
   $('#notifyme').click(function() {
     var $emailaddress = $('#emailaddress');
-    $.post("http://localhost:8080/saywhat",
+    $.post("http://hashtagcharity.org:83/api/subscriptions",
         {
-            email: $emailaddress.val()
+            emailAddress: $emailaddress.val()
         },
         function(data, textStatus, jqXHR)
         {
