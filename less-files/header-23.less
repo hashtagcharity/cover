@@ -22,21 +22,6 @@
     color: #fff;
     text-align: center;
     background: #1b1e21;
-    h1 {
-      .h1;
-      font-size:56px;
-      color: #fff;
-      strong {
-        font-size:56px;
-        color: #fff;
-      }
-    }
-    h2 {
-      color: #fff;
-      margin-bottom: 50px;
-
-    }
-
     .background {
         .opacity(70);
     }
@@ -51,7 +36,6 @@
     .background {
       background-image: url('@{startup-basePath}common-files/img/header/img-video.jpg');
     }
-
 
     .submit {        
       input {
@@ -80,6 +64,24 @@
       }
     }
 
+}
+
+#header-bottom {
+  text-align: center;
+  background: transparent;
+  height: 40px;
+  bottom: 0px;
+  display: inline-block;
+  z-index: 1000;
+  position: absolute;
+
+  img {
+    position: relative;
+    top: -60px;
+    width: 45px;
+    left: -20px;
+    border: 0;
+  }
 }
 
 .mask {

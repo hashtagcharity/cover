@@ -8,42 +8,23 @@
 @import '../../startup/common-files/less/navbar.less';
 
 
-@import '../../less-files/section3.less';
-@import '../../less-files/header-23.less';
-@import '../../less-files/content-8.less';
-@import '../../less-files/counter-1.less';
-@import '../../less-files/content-31.less';
-@import '../../less-files/content-22.less';
-@import '../../less-files/project-common.less';
-@import '../../less-files/project-4.less';
-@import '../../less-files/content-36.less';
-@import '../../less-files/crew-4.less';
-@import '../../less-files/contact-4.less';
-@import '../../less-files/footer-1.less';
+@import '../../less-files/header-23.less';      // header
+@import '../../less-files/content-8.less';      // pitch, smartmatch
+@import '../../less-files/section3.less';       // mainthings, partners
+@import '../../less-files/counter-1.less';      // counter
+@import '../../less-files/content-31.less';     // steps
+@import '../../less-files/crew-4.less';         // team
+@import '../../less-files/contact-4.less';      // contacts
+@import '../../less-files/footer-1.less';       // footer
 
 @import 'variables.less';
 @import 'margins.less';
 @import 'share.less';
 @import 'back-to-top.less';
 
-@import 'rollover-submit.less';
-
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300:700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
-.hiddenSection {
-     opacity:0;
-}
-
-.visibleSection {
-     opacity:1;
-}
-
-.border-radius(@radius) {
-  -moz-border-radius: @radius;
-  -webkit-border-radius: @radius;
-  border-radius: @radius;
-}
 
 .btn-base() {
   border-width: 1px;
@@ -55,84 +36,58 @@
   .no-margin;
 }
 
-.h1 {
-  font-family: @Helvetica-Ultralight;
-  font-size: @h1-font-size;
-  .no-margin;
-  @media(max-width: @screen-sm-min) {
-    font-size: 30pt;
-  }
-
-}
-.h1-heavy {
-  font-family: @Helvetica-Heavy;
-  font-size: @h1-font-size;
-  .no-margin;
-  @media(max-width: @screen-sm-min) {
-    font-size: 30pt;
-  }
-
-}
-
-.h2 {
-  font-family: @Montserrat;
-  font-weight: 400;
-  font-size: @h2-font-size;
-  .no-margin;
-  @media(max-width: @screen-sm-min) {
-    font-size: 8pt;
-  }
-}
-
-.h3 {
-    .h2;
-    font-weight: bold;
-}
-
-h1:extend(.h1) {
-  strong {
-    .h1-heavy;
-    .lead-color;
-  }
-}
-
-h2:extend(.h2) {}
-
-h3:extend(.h3) {}
-
-.p {
-  color: @text-font-color;
-  font-family: @Montserrat;
-  font-size: @text-font-size;
+.font-base(@type, @size, @color) {
+  font-family: @type;
+  font-size: @size;
   font-weight: 300;
+  color: @color;
+  .no-margin;
+}
+
+
+h1 {
+  .font-base(@Helvetica-Ultralight, @h1-font-size, #fff);
+  strong {
+    .font-base(@Helvetica-Heavy, @h1-font-size, #fff);
+  }
+  &, & > strong {
+    @media(max-width: @screen-sm-min) {
+      font-size: 30pt;
+    }
+  }
+}
+
+
+h2 {
+  .font-base(@Helvetica-Ultralight, @h1-font-size, #52606c);
+  strong {
+    .font-base(@Helvetica-Heavy, @h1-font-size, @lead-color);
+  }
+  &, & > strong {
+    @media(max-width: @screen-sm-min) {
+      font-size: 22pt;
+    }
+  }
+}
+
+h3 {
+  .font-base(@Montserrat, @h3-font-size, @lead-color);
+  &, & > strong {
+    @media(max-width: @screen-sm-min) {
+      font-size: 18pt;
+    }
+  }
+}
+
+p {
+  .font-base(@Montserrat, @text-font-size, @text-font-color);
   line-height: 30px;
-  color: #52606c;
-  .no-margin();
-}
-
-p:extends(.p) {
-  .no-margin();
-}
-    
-.circle-full(@size) {
-    background-color: rgba(247,247,247,1);
-    border-width: 0px;
-    height: @size;
-    width: @size;
-    .centering;
-    .border-radius(@size);
-}
-
-.circle-full-big {
-    .circle-full(@big-image-size);
-}
-
-.circle-full-medium {
-    .circle-full(@medium-image-size);
-}
-
-.circle-full-small {
-    .circle-full(@small-image-size);
+  &, & > strong {
+    @media(max-width: @screen-sm-min) {
+      line-height: 24px;
+      font-size: 14px;
+    }
+  }
 }
 
 .page-wrapper > section {
@@ -152,22 +107,3 @@ p:extends(.p) {
   }
 }
 
-
-#header-bottom {
-  text-align: center;
-  background: transparent;
-  height: 40px;
-  bottom: 0px;
-  display: inline-block;
-  z-index: 1000;
-  position: absolute;
-  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-
-  img {
-    position: relative;
-    top: -60px;
-    width: 45px;
-    left: -20px;
-    border: 0;
-  }
-}
