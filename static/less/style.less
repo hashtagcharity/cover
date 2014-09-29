@@ -46,9 +46,9 @@
 
 
 h1 {
-  .font-base(@Helvetica-Ultralight, @h1-font-size, #fff);
+  .font-base(@header-font-type, @h1-font-size, #fff);
   strong {
-    .font-base(@Helvetica-Heavy, @h1-font-size, #fff);
+    .font-base(@header-strong-font-type, @h1-font-size, #fff);
   }
   &, & > strong {
     @media(max-width: @screen-sm-min) {
@@ -59,9 +59,9 @@ h1 {
 
 
 h2 {
-  .font-base(@Helvetica-Ultralight, @h1-font-size, #52606c);
+  .font-base(@header-font-type, @h1-font-size, #52606c);
   strong {
-    .font-base(@Helvetica-Heavy, @h1-font-size, @lead-color);
+    .font-base(@header-strong-font-type, @h1-font-size, @lead-color);
   }
   &, & > strong {
     @media(max-width: @screen-sm-min) {
@@ -71,7 +71,7 @@ h2 {
 }
 
 h3 {
-  .font-base(@Montserrat, @h3-font-size, @lead-color);
+  .font-base(@text-font-type, @h3-font-size, @lead-color);
   &, & > strong {
     @media(max-width: @screen-sm-min) {
       font-size: 18pt;
@@ -80,8 +80,8 @@ h3 {
 }
 
 p {
-  .font-base(@Montserrat, @text-font-size, @text-font-color);
-  line-height: 30px;
+  .font-base(@text-font-type, @text-font-size, @text-font-color);
+  line-height: 26px;
   &, & > strong {
     @media(max-width: @screen-sm-min) {
       line-height: 24px;
