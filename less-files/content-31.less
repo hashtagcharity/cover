@@ -3,6 +3,11 @@
     text-align: left;   
 
     .container {
+        @media(max-width: @screen-sm-min) {
+            h3, p {
+                text-align: center;
+            }
+        }
         & > .row.mid-margin {
                 margin-bottom: 100px !important;
         }
