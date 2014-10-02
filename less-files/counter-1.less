@@ -1,6 +1,8 @@
 .counter-1 {
     //    background-image: url('@{img}/counter_bg.jpg');
     //    background-attachment: fixed;
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
     background-color: @lead-color;
     .container {
         text-align: center;
@@ -13,14 +15,15 @@
         p {
 //            line-height: 66px;
             color: #fff;
-//            font-size: @h2-font-size;
+            font-size: @h2-font-size;
             strong {
                 font-family: @Helvetica-Heavy;
+                font-size: @h2-font-size;
                 font-weight: 900;
             }
             @media(max-width:@screen-sm-min) {
                 line-height: 24px;
-//                font-size: 14px;
+                font-size: 14px;
                 font-weight: 800;
             }
         }
