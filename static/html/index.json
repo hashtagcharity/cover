@@ -32,7 +32,8 @@
         }
     },
     "counter": {
-        "text": "<strong>1,231,233</strong> professionals already subscribed for the launch.<br />You're up next!"
+        "title": "Are you someone who <strong>cares</strong>?",
+        "text": "There are surly <strong>1,231,233</strong> professionals who already do. Why not to join them."
     },
     "steps": {
         "step1": {
