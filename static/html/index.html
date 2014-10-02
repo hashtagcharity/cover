@@ -253,6 +253,25 @@
     </div>
   </section>
 
+  <section id="counter" class="counter-1">
+    <div class="container">
+<!--  
+      <div class="row mid-margin">
+        <h2>{{ counter.title|raw }}</h2>
+      </div>
+-->
+      <div class="row mid-margin">
+        <div class="col-xs-12 numbers">
+          <p>{{ counter.text|raw }}</p> 
+        </div> 
+      </div>
+      <div class="row no-margin">
+        <button id="signmeup" type="button" class="btn btn-primary btn-lg">Sign Me Up</button>      
+      </div>
+
+    </div>
+  </section>
+  
   <section id="steps" class="content-31">
     <div class="container">
       <div class="row mid-margin">
@@ -342,25 +361,6 @@
 
   </div>
 </section>
-
-  <section id="counter" class="counter-1">
-    <div class="container">
-<!--  
-      <div class="row mid-margin">
-        <h2>{{ counter.title|raw }}</h2>
-      </div>
--->
-      <div class="row mid-margin">
-        <div class="col-xs-12 numbers">
-          <p>{{ counter.text|raw }}</p> 
-        </div> 
-      </div>
-      <div class="row no-margin">
-        <button id="signmeup" type="button" class="btn btn-primary btn-lg">Sign Me Up</button>      
-      </div>
-
-    </div>
-  </section>
 
 <!-- this section will stay hidden temporarily -->
 <section id="partners" class="section3" style="display: none">
