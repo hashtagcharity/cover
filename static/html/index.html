@@ -101,18 +101,17 @@
         
         <div class="row mid-margin">
           <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-            <div class="submit">
-              <input id="emailaddress" type="text" placeholder="{{ header.emailtext }}" spellcheck="false">
-
-              <a id="notifyme" class="btn btn-large btn-submit" href="#">
-                <span class="hidden-xs">
-                 {{ header.submit }}
-               </span>
-               <span class="visible-xs">
-                <img src="img/pict/check.png" alt="Submit Button Icone" />
-              </span>
-            </a>
-          </div> 
+			<form class="submit" role="search">
+				<input id="emailaddress" type="text" placeholder="{{ header.emailtext }}" spellcheck="false">
+				<button id="notifyme" class="btn btn-large btn-submit" onClick="window.location.href='#'">
+					<span class="hidden-xs">
+						{{ header.submit }}
+					</span>
+					<span class="visible-xs">
+						<img src="img/pict/check.png" alt="Submit Button Icone" />
+					</span>
+				</button>
+			</form>	
         </div>
       </div>
 
