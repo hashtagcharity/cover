@@ -16,6 +16,4 @@ cache:
   directories:
     - node_modules
 notifications:
-  email:
-    - istvan.kiesz@hashtagcharity.org
-    - jozsef.czapovics@hashtagcharity.org
+  slack: hashtagcharity:iJNujPeyxMGap6QCsXZTaH64
