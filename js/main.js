@@ -13,25 +13,26 @@
     ga('send', 'event', 'subscribe', 'click');
   });
 
-  $('#to-top').hide();
-  $('#sidebar').hide();
+//  $('#to-top').hide();
 
+/*
   $('#pitch').waypoint(function(direction) {
     if (direction === 'down') {
-//      $('#sidebar').fadeIn();
       $('#to-top').fadeIn();
     } else {
-//      $('#sidebar').fadeOut();
       $('#to-top').fadeOut();
     }
   });
+*/
 
   var $root = $('html, body');
 
-  $('#to-top a').click(function() {
+  $('#signmeup').click(function() {
     $root.animate({ 
       scrollTop: 0
     }, 1000);
+    $('#emailaddress').focus();
+    
     return false;
   });
 

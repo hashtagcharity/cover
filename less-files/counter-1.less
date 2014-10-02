@@ -1,37 +1,39 @@
 .counter-1 {
-    background-image: url('@{img}/counter_bg.jpg');
-    background-attachment: fixed;
-    text-align: center;
-
-    .numbers {
-        font-family: @Helvetica-Heavy;
-        font-size: 45px;
-        color: #fff;
-    }
-    
-    .btn.btn-signup {
-        width: 300px;
-        .box-sizing(border-box);
-        border: 1px solid @brand-danger;
-        .font(12px);
-        font-family: @font-family-demo;
-        padding: 20px 80px;
-        color: #fff;
-        background: transparent;
-        border-color: #fff;
-        &:hover, &:focus {
+    //    background-image: url('@{img}/counter_bg.jpg');
+    //    background-attachment: fixed;
+    background-color: @lead-color;
+    .container {
+        text-align: center;
+        p {
+            line-height: 66px;
             color: #fff;
-            background: @lead-color;
-            border-color: @lead-color;
+            font-size: @h2-font-size;
+            strong {
+                font-family: @Helvetica-Heavy;
+                font-weight: 900;
+            }
+            @media(max-width:@screen-sm-min) {
+                line-height: 24px;
+                font-size: 14px;
+                font-weight: 800;
+            }
         }
-        &:active, &.active {
-            color: #fff;
-            background: @lead-color;
-            border-color: @lead-color;
-            
+        .btn {
+            .border-radius(1px);
+            text-transform: uppercase;
+            width: 370px;
+            height: 60px;
+            font-family: @text-font-type;
+            -webkit-box-shadow: 0px 0px 25px -1px rgba(50, 50, 50, 0.64);
+            -moz-box-shadow:    0px 0px 25px -1px rgba(50, 50, 50, 0.64);
+            box-shadow:         0px 0px 25px -1px rgba(50, 50, 50, 0.64);
         }
-        .btn-base;
+        .btn-primary {
+            background-color: #318bff;
+            &:hover {
+                background-color: #1966cc;
+            }
+        }
     }
     .v-center;
-        
 }

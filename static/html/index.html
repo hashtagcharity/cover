@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="js no-touch cssanimations csstransitions loaded">
+<!--[if lt IE 9]> <html lang="en" class="no-js ie lt-ie9"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="js no-touch geolocation hashchange history csstransform cssanimations csstransitions loaded">
 
 <head>
   <!-- Open Graph social properties -->
@@ -66,11 +69,11 @@
     </div>
 
   </div>
-
-  <p id="to-top">
+<!--
+  <p id="to-top" style="display: hidden">
     <a href="#top"><span></span></a>
   </p>
-
+-->
   <div class="page-wrapper">
 
     <header class="header-23">
@@ -84,7 +87,7 @@
       <div class="container">
         <div class="row mid-margin">
           <div class="col-sm-12">
-            <div class="img">
+            <div id="logo" class="img">
               <img src="img/charity_logo.png" alt="Charity Logo" />
             </div>
           </div>
@@ -250,18 +253,15 @@
     </div>
   </section>
 
-  <!-- this section will stay hidden temporarily -->    
-  <section id="counter" class="counter-1" style="display: none">
+  <section id="counter" class="counter-1">
     <div class="container">
-      <div class="row low-margin">
+      <div class="row mid-margin">
         <div class="col-xs-12 numbers">
-          86 | 748 | 213
-        </div>
+          <p>{{ counter.text|raw }}</p> 
+        </div> 
       </div>
       <div class="row no-margin">
-        <div class="col-xs-12">
-          <p>{{ counter.text }}</p>
-        </div>
+        <button id="signmeup" type="button" class="btn btn-primary btn-lg">Sign Me Up</button>      
       </div>
 
     </div>
