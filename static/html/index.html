@@ -101,16 +101,17 @@
         
         <div class="row mid-margin">
           <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-			<form class="submit" role="search">
-				<input id="emailaddress" type="text" placeholder="{{ header.emailtext }}" spellcheck="false">
-				<button id="notifyme" class="btn btn-large btn-submit" onClick="window.location.href='#'">
+			<form class="input-group">
+				<input class="form-control" type="text" placeholder="{{ header.emailtext }}" spellcheck="false">
+				<span class="input-group-btn">
+					<button class="btn btn-default"  type="button" onClick="window.location.href='#'">							
 					<span class="hidden-xs">
 						{{ header.submit }}
-					</span>
+					</span>			
 					<span class="visible-xs">
 						<img src="img/pict/check.png" alt="Submit Button Icone" />
-					</span>
-				</button>
+					</span></button>
+				</span>
 			</form>	
         </div>
       </div>
