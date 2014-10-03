@@ -34,33 +34,32 @@
       background-image: url('@{startup-basePath}common-files/img/header/img-video.jpg');
     }
 
-    .submit {        
-      input {
-          border-width: 0px;
-          background: rgba(255,255,255,0.2);
-          padding: 15px;
-          font-family: @Montserrat;
-          font-size: 12px;
-          color: #fff;
-          width: 70%;
-          .border-radius(5px 0px 0px 5px);
-          .no-margin;
-      }
-      .btn-submit {
-          .border-radius(0px 5px 5px 0px);
-          border-width: 0px;
-          font-family: @Montserrat;
-          font-size: 12px;
-          background: @lead-color;
-          color: #fff;
-          margin: -1px 0px 1px -4px;
-          padding: 12px 25px 11px 25px;
-          @media (max-width: @screen-sm-min) {
-            width: 20px;
-          }
-      }
+    .input-group { 
+		position: relative;	
+		width: 85%;
+		margin-left: auto;
+		margin-right: auto;
+		input {
+			background: rgba(255,255,255,0.2);
+			font-family: @Montserrat;
+			font-size: 12px;
+			color: #fff;
+			border-width: 0px;
+			.border-radius(10px 0px 0px 10px);
+			.no-margin;
+		}
+		.btn-submit {
+			background: @lead-color;
+			color: #FFF;
+			font-family: @Montserrat;
+			font-size: 12px; 
+			border-width: 0px;
+			.border-radius: 0px 10px 10px 0px;
+			@media (max-width: @screen-sm-min) {
+				width: 20px;
+			}
+		}
     }
-
 }
 
 #header-bottom {
