@@ -29,7 +29,7 @@
   <!-- end -->
   <link rel="stylesheet" href="startup/common-files/css/animations.css">
 
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/style.css?v1">
 
   <!-- site animation -->
   <link rel="stylesheet" href="static/css/animate.css">
@@ -70,19 +70,15 @@
         </div> 
         
         <div class="row mid-margin">
-          <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-      			<form class="input-group">
-      				<input id="emailaddress" class="form-control" type="text" placeholder="{{ header.emailtext }}" spellcheck="false">
-      				<span class="input-group-btn">
-      					<button id="subscribe" class="btn btn-default btn-submit"  type="button" />							
-      					<span class="hidden-xs">
-      						{{ header.submit }}
-      					</span>			
-      					<span class="visible-xs">
-      						<img src="img/pict/check.png" alt="Submit Button Icon" />
-      					</span></button>
-      				</span>
-      			</form>	
+          <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="{{ header.emailtext }}" spellcheck="false" />
+              <span class="input-group-btn">
+                <button class="btn btn-default btn-notifyme" type="button">
+                    <span>{{ header.submit }}</span>
+                </button>
+              </span>
+            </div>
         </div>
       </div>
 
