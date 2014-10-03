@@ -1,14 +1,22 @@
 .footer-1 {
-    padding: 15px 0 !important;
-    .no-margin;
     background-color: rgba(65, 38, 64, 1);
+    padding: 10px 0 !important;
     border: 0 !important;
-    
-    p {
-        color: @lead-color;
-    }
-    
-    .pull-right {
-        .clearfix();
+    .no-margin;
+    .container {
+        
+        p {
+            color: @lead-color;
+            @media (max-width: @screen-xs-min) {
+                font-size: 8px;
+            }
+        }
+        img {
+            width: 51px;
+            height: 20px;
+        }
+        .pull-right {
+            .clearfix();
+        }
     }
 }
