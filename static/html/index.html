@@ -69,11 +69,7 @@
     </div>
 
   </div>
-<!--
-  <p id="to-top" style="display: hidden">
-    <a href="#top"><span></span></a>
-  </p>
--->
+
   <div class="page-wrapper">
 
     <header class="header-23">
@@ -101,18 +97,18 @@
         
         <div class="row mid-margin">
           <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-			<form class="input-group">
-				<input class="form-control" type="text" placeholder="{{ header.emailtext }}" spellcheck="false">
-				<span class="input-group-btn">
-					<button class="btn btn-default"  type="button" onClick="window.location.href='#'">							
-					<span class="hidden-xs">
-						{{ header.submit }}
-					</span>			
-					<span class="visible-xs">
-						<img src="img/pict/check.png" alt="Submit Button Icone" />
-					</span></button>
-				</span>
-			</form>	
+      			<form class="input-group">
+      				<input id="emailaddress" class="form-control" type="text" placeholder="{{ header.emailtext }}" spellcheck="false">
+      				<span class="input-group-btn">
+      					<button id="subscribe" class="btn btn-default"  type="button" />							
+      					<span class="hidden-xs">
+      						{{ header.submit }}
+      					</span>			
+      					<span class="visible-xs">
+      						<img src="img/pict/check.png" alt="Submit Button Icon" />
+      					</span></button>
+      				</span>
+      			</form>	
         </div>
       </div>
 
@@ -141,14 +137,6 @@
       </div>
 
     </div>
-
-<!--
-    <a id="header-bottom" href="#" class="hidden-xs">
-      <div>
-        <img src="../../img/pict/down.png" alt="Down Arrow" />
-      </div>
-    </a>
--->
   </section> 
 
   <section id="pitch" class="content-8">
@@ -257,11 +245,6 @@
 
   <section id="counter" class="counter-1">
     <div class="container">
-<!--  
-      <div class="row mid-margin">
-        <h2>{{ counter.title|raw }}</h2>
-      </div>
--->
       <div class="row mid-margin">
         <div class="col-xs-12 numbers">
           <p>{{ counter.text|raw }}</p> 
@@ -270,7 +253,6 @@
       <div class="row no-margin">
         <button id="signmeup" type="button" class="btn btn-primary btn-lg">Sign Me Up</button>      
       </div>
-
     </div>
   </section>
 
@@ -363,252 +345,6 @@
 
   </div>
 </section>
-
-<!-- this section will stay hidden temporarily -->
-<section id="partners" class="section3" style="display: none">
- <div class="container">
-   <div class="row mid-margin">
-     <div class="col-sm-12">
-       <h2>{{ partners.title|raw }}</h2>
-     </div>
-   </div>
-
-   <div class="row features">
-     <div class="col-sm-3">
-       <div class="row mid-margin picto">
-        <div class="img">
-          <img src="img/pict/pict_partners.png" alt="Partners" />        
-        </div> 
-       </div>
-
-       <div class="row low-margin">
-        <div class="col-sm-12">
-          <h3>{{ partners.partner1.name }}</h3>
-        </div>
-       </div>
-
-       <div class="row no-margin">
-        <div class="col-sm-12">
-          <p>{{ partners.partner1.description }}</p>
-        </div>
-       </div>
-     </div>
-
-     <div class="col-sm-3">
-      <div class="row mid-margin picto">
-        <div class="img">
-          <img src="img/pict/pict_partners.png" alt="Partners" />        
-        </div> 
-      </div>
-
-      <div class="row low-margin">
-        <div class="col-sm-12">
-          <h3>{{ partners.partner2.name }}</h3>
-        </div>
-      </div>
-
-      <div class="row no-margin">
-        <div class="col-sm-12">
-          <p>{{ partners.partner2.description }}</p>
-        </div>
-     </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="row mid-margin picto">
-       <div class="img">
-          <img src="img/pict/pict_partners.png" alt="Partners" />        
-       </div> 
-      </div>
-
-      <div class="row low-margin">
-       <div class="col-sm-12">
-         <h3>{{ partners.partner3.name }}</h3>
-       </div>
-      </div>
-
-      <div class="row no-margin">
-       <div class="col-sm-12">
-         <p>{{ partners.partner3.description }}</p>
-       </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="row mid-margin picto">
-       <div class="img">
-        <img src="img/pict/pict_partners.png" alt="Partners" />        
-       </div> 
-      </div>
-
-      <div class="row low-margin">
-       <div class="col-sm-12">
-        <h3>{{ partners.partner4.name }}</h3>
-       </div>
-      </div>
-
-      <div class="row no-margin">
-       <div class="col-sm-12">
-         <p>{{ partners.partner4.description }}</p>
-       </div>
-      </div>
-    </div>
-   </div>
- </div>
-</section>
-
-
-<!-- this section will stay hidden temporarily -->  
-<section id="team" class="crew-4" style="display: none">
- <div class="container">
-   <div class="row mid-margin">
-     <div class="col-sm-12">
-       <h2>{{ team.title|raw }}</h2>
-     </div>
-   </div>
-   <div class="members row mid-margin">
-     <div class="col-sm-3">
-       <div class="member-wrapper">
-         <div class="member">
-           <div class="photo-wrapper">
-             <div class="photo"><img src="{{ team.member1.img }}" alt="Member" /></div>
-             <div class="overlay">
-               <a href="{{ team.member1.linkedin }}" target="_blank"><span class="fui-linkedin"></span></a>
-               <a href="{{ team.member1.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
-             </div>
-           </div>
-           <div class="info">
-             <div class="name">{{ team.member1.name }}</div>
-             <p>{{ team.member1.title }}</p>
-           </div>
-         </div>
-       </div>
-     </div>
-     <div class="col-sm-3">
-       <div class="member-wrapper">
-         <div class="member">
-           <div class="photo-wrapper">
-             <div class="photo"><img src="{{ team.member2.img }}" alt="Member" /></div>
-             <div class="overlay">
-               <a href="{{ team.member2.linkedin }}" target="_blank"><span class="fui-linkedin"></span></a>
-               <a href="{{ team.member2.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
-             </div>
-           </div>
-           <div class="info">
-             <div class="name">{{ team.member2.name }}</div>
-             <p>{{ team.member2.title }}</p>
-           </div>
-         </div>
-       </div>
-     </div>
-     <div class="col-sm-3">
-       <div class="member-wrapper">
-         <div class="member">
-           <div class="photo-wrapper">
-             <div class="photo"><img src="{{ team.member3.img }}" alt="Member" /></div>
-             <div class="overlay">
-               <a href="{{ team.member3.linkedin }}" target="_blank"><span class="fui-linkedin"></span></a>
-               <a href="{{ team.member3.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
-             </div>
-           </div> 
-           <div class="info">
-             <div class="name">{{ team.member3.name }}</div>
-             <p>{{ team.member3.title }}</p>
-           </div>
-         </div>
-       </div>
-     </div>
-     <div class="col-sm-3">
-       <div class="member-wrapper">
-         <div class="member">
-           <div class="photo-wrapper">
-             <div class="photo"><img src="{{ team.member4.img }}" alt="Member" /></div>
-             <div class="overlay">
-               <a href="{{ team.member4.linkedin }}" target="_blank"><span class="fui-linkedin"></span></a>
-               <a href="{{ team.member4.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
-             </div>
-           </div>
-           <div class="info">
-             <div class="name">{{ team.member4.name }}</div>
-             <p>{{ team.member4.title }}</p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-   <div class="members row no-margin">
-     <div class="col-sm-3">
-       <div class="member-wrapper">
-         <div class="member">
-           <div class="photo-wrapper">
-             <div class="photo"><img src="{{ team.member5.img }}" alt="Member" /></div>
-             <div class="overlay">
-               <a href="{{ team.member5.linkedin }}" target="_blank"><span class="fui-linkedin"></span></a>
-               <a href="{{ team.member5.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
-             </div>
-           </div>
-           <div class="info">
-             <div class="name">{{ team.member5.name }}</div>
-             <p>{{ team.member5.title }}</p>
-           </div>
-         </div>
-       </div>
-     </div>
-     <div class="col-sm-3">
-       <div class="member-wrapper">
-         <div class="member">
-           <div class="photo-wrapper">
-             <div class="photo"><img src="{{ team.member6.img }}" alt="Member" /></div>
-             <div class="overlay">
-               <a href="{{ team.member6.linkedin }}" target="_blank"><span class="fui-linkedin"></span></a>
-               <a href="{{ team.member6.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
-             </div>
-           </div>
-           <div class="info">
-             <div class="name">{{ team.member6.name }}</div>
-             <p>{{ team.member6.title }}</p>
-           </div>
-         </div>
-       </div>
-     </div>
-     <div class="col-sm-3">
-       <div class="member-wrapper">
-         <div class="member">
-           <div class="photo-wrapper">
-             <div class="photo"><img src="{{ team.member7.img }}" alt="Member" /></div>
-             <div class="overlay">
-               <a href="{{ team.member7.linkedin }}" target="_blank"><span class="fui-linkedin"></span></a>
-               <a href="{{ team.member7.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
-             </div>
-           </div>
-           <div class="info">
-             <div class="name">{{ team.member7.name }}</div>
-             <p>{{ team.member7.title }}</p>
-           </div>
-         </div>
-       </div>
-     </div>
-     <div class="col-sm-3">
-       <div class="member-wrapper">
-         <div class="member">
-           <div class="photo-wrapper">
-             <div class="photo"><img src="{{ team.member8.img }}" alt="Member" /></div>
-             <div class="overlay">
-               <a href="{{ team.member8.linkedin }}" target="_blank"><span class="fui-linkedin"></span></a>
-               <a href="{{ team.member8.twitter }}" target="_blank"><span class="fui-twitter"></span></a>
-             </div>
-           </div>
-           <div class="info">
-             <div class="name">{{ team.member8.name }}</div>
-             <p>{{ team.member8.title }}</p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
-</section>
-
 
 <section id="contacts" class="contacts-4">
   <div class="container">

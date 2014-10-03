@@ -7,28 +7,9 @@
 })();
 
 (function($) {
-
-  // conversion tracking
-  $('.btn-submit').click(function(e) {
-    ga('send', 'event', 'subscribe', 'click');
-  });
-
-//  $('#to-top').hide();
-
-/*
-  $('#pitch').waypoint(function(direction) {
-    if (direction === 'down') {
-      $('#to-top').fadeIn();
-    } else {
-      $('#to-top').fadeOut();
-    }
-  });
-*/
-
-  var $root = $('html, body');
-
+ 
   $('#signmeup').click(function() {
-    $root.animate({ 
+    $('html, body').animate({ 
       scrollTop: 0
     }, 1000);
     $('#emailaddress').focus();
@@ -36,28 +17,43 @@
     return false;
   });
 
-  $('#header-bottom').click(function() {
-    $root.animate({ 
-      scrollTop: $('#pitch').offset().top 
-    }, 800);
-    return false;
+  function updateCounter() {
+
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    $.get( "http://hashtagcharity.org:83/api/subscriptions/statistics", function(data) {
+      $('#counter').css("display", "block");
+      $('#counterNumber').html('<strong>' + numberWithCommas(data.allSubscriptions) + '</strong>');
+    }, "json");
+  }
+
+
+  $('#subscribe').click(function() {
+    var $emailaddress = $('#emailaddress');
+    var emailAddressValue = $emailaddress.val();
+
+    if (!emailAddressValue || emailAddressValue.length === 0 || !emailAddressValue.trim()) {
+      return;
+    }
+
+    $.post("http://hashtagcharity.org:83/api/subscriptions", { emailAddress: emailAddressValue },
+        function(data, textStatus, jqXHR) {
+          $emailaddress.val('');
+          updateCounter();
+        })
+        .fail(function(jqXHR, textStatus, errorThrown) {
+          alert($emailaddress.val() + ": " + textStatus);
+          $emailaddress.val('');
+        });
+
+    // conversion tracking
+    ga('send', 'event', 'subscribe', 'click');
   });
 
-  $('#notifyme').click(function() {
-    var $emailaddress = $('#emailaddress');
-    $.post("http://hashtagcharity.org:83/api/subscriptions",
-        {
-            emailAddress: $emailaddress.val()
-        },
-        function(data, textStatus, jqXHR)
-        {
-            //data - response from server
-        }).fail(function(jqXHR, textStatus, errorThrown) 
-        {
-            alert($emailaddress.val() + ": " + textStatus);
-            $emailaddress.val('');
-        })
-  });
+
+  updateCounter();
 
 })(jQuery);
 
