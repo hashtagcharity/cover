@@ -16,7 +16,7 @@ var build_dir = base_dir + '/dist';
 
 
 var files = {
-  images: [base_dir + '/img/**/*.png', base_dir + '/img/**/*.jpg'],
+  images: [base_dir + '/img/**/*.png', base_dir + '/img/**/*.jpg', base_dir + '/img/**/*.svg'],
   js: base_dir + '/js/**/*.js',
   startup: base_dir + '/startup/**/*',
   fonts: base_dir + '/static/font/**/*.OTF',
