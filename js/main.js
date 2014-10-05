@@ -39,7 +39,7 @@
       return;
     }
 
-    $.post("http://hashtagcharity.org:83/api/subscriptions", { emailAddress: emailAddressValue },
+    $.post("http://hashtagcharity.org:83/api/subscriptions/add", { emailAddress: emailAddressValue },
         function(data, textStatus, jqXHR) {
           $emailaddress.val('');
           updateCounter();
