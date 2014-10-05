@@ -7,28 +7,28 @@
     },
 
     "header": { 
-        "title": "VOLUNTEER YOUR <strong>SKILLS</strong>",
+        "title": "VOLUNTEER YOUR <strong> TECH SKILLS</strong>",
         "emailtext": "Email address",
         "submit": "NOTIFY ME"
     },
     "pitch": {
-        "title": "FIND A <strong>CAUSE </strong>AND PLEDGE YOUR <strong>SKILLS </strong>",
-        "description": "Nonprofits, NGOs, and charities have to spend money on IT development. That money could be used on their actual missions but they need the IT. #Charity is a new platform that connects the tech needs of organizations to individuals or teams of IT experts willing to volunteer their tech skills and time."
+        "title": "PICK A <strong>CAUSE. </strong>PLEDGE YOUR <strong> TECH SKILLS. </strong>MAKE A <strong> DIFFERENCE. </strong>",
+        "description": "Hashtagcharity allows IT professionals to leverage and volunteer their tech skills to help nonprofits reduce their IT costs. By reducing IT costs, nonprofits can use those savings on their actual missions making the world a better place.  "
     },
     "mainthings": {
-        "title": "WHY ARE WE <strong>DIFFERENT?</strong>",
+        "title": "WHAT <strong>WE DO</strong>",
         "description": "",
         "thing1": {
             "title": "#GOODCAUSE",
-            "description": "Details about the Main thing 1 here - in one or two sentences."
+            "description": "We guarantee that all IT projects on our platform are for a good cause. You as a volunteer can be sure that the organizations are legitimate and the projects will have a deep positive impact somewhere in the world."
         },
         "thing2": {
             "title": "#SKILLBASED",
-            "description": "Details about the Main thing 2 here - in one or two sentences."
+            "description": "We SmartMatch projects to volunteers based on their specific areas of interest and skill sets."
         },
         "thing3": {
             "title": "#EXECUTION",
-            "description": "Details about the Main thing 3 here - in one or two sentences."
+            "description": "What makes us special is our level of strategic involvement in the execution phase. We do not just match people and projects. To make the volunteering experience smoother, more efficient and enjoyable, we are integrating the best 3rd party apps into our platform."
         }
     },
     "counter": {
@@ -38,20 +38,20 @@
     "steps": {
         "step1": {
             "title": "#OPEN",
-            "description": "It all starts with a great charity idea. Put here what kind of ideas we talk about and how easy to create it on our site. Emphasize that they should describe the skills they need - but could start without it as well, we will help."
+            "description": "You submit your project along with the IT skills needed. If you do not know what skills your IT project needs, we have dedicated people that will assist you to figure them out."
         },
         "step2": {
-            "title": "#JOIN",
-            "description": "We match the projects wth contributors with the proper skills. Describe here why it is more efficient than anything else. Why is it good for project owner and why it is good for contributors."
+            "title": "#MATCH",
+            "description": "Your project goes live on our platform.  We then match the IT project with the proper skilled volunteers."
         },
         "step3": {
-            "title": "#TOGETHER",
-            "description": "Put here that we will support the execution too. Describe why it is important and that we ensure Collboration, Reposiotry management, Storage and Social network tools."
+            "title": "#SUPPORT",
+            "description": "Once volunteers commit to your project, we help them with everything they need to make it a success. Because sometimes volunteers will come and go, we will keep all of the information on our platform, every project has its own space at Hashtagcharity where volunteers can discuss, support, and give tips to each other."
         }
     },
     "smartmatch": {
         "title": "<strong>#</strong>SMART<strong>MATCH</strong>",
-        "description": "Put the 30 seconds pitch here. It should be very easy to understand and not too long. Put the 30 seconds pitch here. It should be very easy to understand and not too long."
+        "description": "We have our own algorithm to match the right people to the right projects. We take into consideration what causes the volunteers care most about, what IT skills they posses, and connect them to projects in their area of interest that need their specific skills."
     },
     "partners": {
         "title": "WE ARE <strong>NOT ALONE</strong><br/>WE ALREADY HAVE <strong>GREAT PARTNERS</strong><br/>AND LOOKING FOR MORE",
