@@ -24,7 +24,7 @@
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    $.get( "http://hashtagcharity.org:83/api/subscriptions/statistics", function(data) {
+    $.get("http://landing.hashtagcharity.org:83/api/subscriptions/statistics", function(data) {
       $('#counter').css("display", "block");
       $('#counterNumber').html('<strong>' + numberWithCommas(data.allSubscriptions) + '</strong>');
     }, "json");
@@ -39,7 +39,7 @@
       return;
     }
 
-    $.post("http://hashtagcharity.org:83/api/subscriptions/add", { emailAddress: emailAddressValue },
+    $.post("http://landing.hashtagcharity.org:83/api/subscriptions/add", { emailAddress: emailAddressValue },
         function(data, textStatus, jqXHR) {
           $emailaddress.val('');
           updateCounter();
