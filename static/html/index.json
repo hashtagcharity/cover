@@ -36,6 +36,8 @@
         "text": "<span id='counterNumber'><strong>1,231,233</strong></span> professionals already care about others. Are you the next?"
     },
     "steps": {
+        "title": "HOW DOES IT <strong>WORK?</strong>",
+        "description": "Whether you are a small team or a large multinational charity organization, you can list your IT needs on hashtagcharity for free.",
         "step1": {
             "title": "#OPEN",
             "description": "You submit your project along with the IT skills needed. If you do not know what skills your IT project needs, we have dedicated people that will assist you to figure them out."
