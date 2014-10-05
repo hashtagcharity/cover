@@ -43,14 +43,14 @@
         function(data, textStatus, jqXHR) {
           $emailaddress.val('');
           updateCounter();
+
+          // conversion tracking
+          ga('send', 'event', 'subscribe', 'click');
         })
         .fail(function(jqXHR, textStatus, errorThrown) {
           alert($emailaddress.val() + ": " + textStatus);
           $emailaddress.val('');
         });
-
-    // conversion tracking
-    ga('send', 'event', 'subscribe', 'click');
   });
 
 
