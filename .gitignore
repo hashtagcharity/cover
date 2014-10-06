@@ -11,7 +11,7 @@
 sftp-config.json
 xcode/
 node_modules/
-index.html
+*.html
 dist
 
 static/css/style.css
