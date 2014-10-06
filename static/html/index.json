@@ -12,7 +12,7 @@
         "submit": "NOTIFY ME"
     },
     "pitch": {
-        "title": "PICK A <strong>CAUSE. </strong>PLEDGE YOUR <strong> TECH SKILLS. <span class='hidden-sm'><br/></span></strong>MAKE A <strong> DIFFERENCE. </strong>",
+        "title": "PICK A <strong>CAUSE. </strong>PLEDGE YOUR <strong> TECH SKILLS. <span class='hidden-xs'><br></span></strong>MAKE A <strong> DIFFERENCE. </strong>",
         "description": "Hashtagcharity allows IT professionals to leverage and volunteer their tech skills to help nonprofits reduce their IT costs. By reducing IT costs, nonprofits can use those savings on their actual missions making the world a better place.  "
     },
     "mainthings": {
@@ -56,7 +56,7 @@
         "description": "We have our own algorithm to match the right people to the right projects. We take into consideration what causes the volunteers care most about, what IT skills they posses, and connect them to projects in their area of interest that need their specific skills."
     },
     "partners": {
-        "title": "WE ARE <strong>NOT ALONE</strong><br/>WE ALREADY HAVE <strong>GREAT PARTNERS</strong><br/>AND LOOKING FOR MORE",
+        "title": "WE ARE <strong>NOT ALONE</strong><br>WE ALREADY HAVE <strong>GREAT PARTNERS</strong><br>AND LOOKING FOR MORE",
         "partner1": {
             "name": "ACTION AGAINST HUNGER",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dolor ex. Nam arcu enim, gravida id accumsan feugiat, rutrum pulvinar nisi."
@@ -75,7 +75,7 @@
         }
     },
     "team": {
-        "title": "THE ENTHUSIASTIC <strong>TEAM</strong><br/>BEHIND <strong>#CHARITY</strong>",
+        "title": "THE ENTHUSIASTIC <strong>TEAM</strong><br>BEHIND <strong>#CHARITY</strong>",
         "member1": {
             "img": "img/jozsef_czapovics.jpg",
             "facebook": "#",
@@ -134,8 +134,8 @@
         }
     },
     "contacts": {
-        "title": "GET IN TOUCH <span class='hidden-sm'><br/></span><strong>WITH US</strong>",
-        "description": "We would love to know what you think<br/>feel free to contact us.",
+        "title": "GET IN TOUCH <span class='hidden-xs'><br></span><strong>WITH US</strong>",
+        "description": "We would love to know what you think<br>feel free to contact us.",
         "twitter": "https://twitter.com/hashtagcharity",
         "linkedin": "https://www.linkedin.com/company/hashtagcharity-org",
         "facebook": "https://facebook.com/hashtagcharity",
