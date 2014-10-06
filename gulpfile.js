@@ -95,7 +95,7 @@ gulp.task('copy', ['default'], function() {
   var filesToCopy = [
     files.images[0], files.images[1], files.images[2], 
     files.js, files.startup, files.fonts, files.css, files.video,
-    './index.html'
+    './index.html', '/.thankyouemail.html'
   ];
 
   gulp.src(filesToCopy, { base: base_dir })
