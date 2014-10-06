@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+dd<!DOCTYPE html>
 <html lang="en" class="js no-touch geolocation hashchange history csstransform cssanimations csstransitions loaded">
 
 <head>
@@ -41,15 +41,15 @@
 
 <body id="top" data-campaign-url="http://new.hashtagcharity.org/?utm_medium=socialmedia&amp;utm_campaign=2014_subscribe">
 
-  <div class="page-wrapper">
+<div class="page-wrapper">
 
-    <header class="header-23">
-      <div class="container">
-        <div class="mask">&nbsp;</div>
-      </div>
-    </header>
+  <header class="header-23">
+    <div class="container">
+      <div class="mask">&nbsp;</div>
+    </div>
+  </header>
 
-    <section id="header" class="header-23-sub">
+  <section id="header" class="header-23-sub">
       <div id="bgVideo" class="background">&nbsp;</div>
       <div class="container">
         <div class="row mid-margin">
@@ -68,7 +68,7 @@
         
         <div class="row mid-margin">
           <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-            <div class="input-group">
+            <div id="subscribe-section" class="input-group">
               <input id="emailaddress" type="text" class="form-control" placeholder="{{ header.emailtext }}" spellcheck="false" />
               <span class="input-group-btn">
                 <button id="subscribe" class="btn btn-default btn-notifyme" type="button">
@@ -76,39 +76,40 @@
                 </button>
               </span>
             </div>
+            <div id="thankyou-section" style="display: none">
+              <h1>Thank You</h1>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="row no-margin">
-        <div class="col-xs-12 col-md-6 col-md-offset-3">
-          <div class="sharebuttons">
-      
-            <div class="col-xs-3 col-sm-2 col-sm-offset-2">
-              <a class="btn btn-large twitter-share track-social" data-social-platform="twitter" data-share-text="Volunteer your skills with @hashtagcharity, the platform for IT Pros who care" data-share-url="http://hashtagcharity.org" data-share-hashtags="charity,volunteering,socialgood" ></a>
+        <div class="row no-margin">
+          <div class="col-xs-12 col-md-6 col-md-offset-3">
+            <div class="sharebuttons">
+        
+              <div class="col-xs-3 col-sm-2 col-sm-offset-2">
+                <a class="btn btn-large twitter-share track-social" data-social-platform="twitter" data-share-text="Volunteer your skills with @hashtagcharity, the platform for IT Pros who care" data-share-url="http://hashtagcharity.org" data-share-hashtags="charity,volunteering,socialgood" ></a>
+              </div>
+        
+              <div class="col-xs-3 col-sm-2">
+                <a class="btn btn-large linkedin-share track-social" data-social-platform="linkedin" data-share-title="#charity" data-share-summary="Volunteer your skills with hashtagcharity, the platform for IT Pros who care" data-share-source="http://hashtagcharity.org"></a>
+              </div>
+        
+              <div class="col-xs-3 col-sm-2">
+                <a class="btn btn-large facebook-share track-social" data-social-platform="facebook"></a>
+              </div>
+        
+              <div class="col-xs-3 col-sm-2"> 
+                <a class="btn btn-large googleplus-share track-social" data-social-platform="googleplus"></a>
+              </div>
+        
             </div>
-      
-            <div class="col-xs-3 col-sm-2">
-              <a class="btn btn-large linkedin-share track-social" data-social-platform="linkedin" data-share-title="#charity" data-share-summary="Volunteer your skills with hashtagcharity, the platform for IT Pros who care" data-share-source="http://hashtagcharity.org"></a>
-            </div>
-      
-            <div class="col-xs-3 col-sm-2">
-              <a class="btn btn-large facebook-share track-social" data-social-platform="facebook"></a>
-            </div>
-      
-            <div class="col-xs-3 col-sm-2"> 
-              <a class="btn btn-large googleplus-share track-social" data-social-platform="googleplus"></a>
-            </div>
-      
           </div>
         </div>
       </div>
-
-    </div>
   </section> 
 
   <section id="pitch" class="content-8">
     <div class="container">
-      
       <div class="row mid-margin picto">
         <div class="col-xs-12 img wow fadeInUp">
           <img src="img/pict/pikto_pitch.svg" alt="pitch" />
@@ -127,14 +128,12 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
 
   <section id="mainthings" class="section3">
     <div class="container">
-      
       <div class="wow fadeIn">
         <div class="row mid-margin">
           <div class="col-sm-12">
@@ -205,8 +204,8 @@
             </div>
           </div>
         </div>
-
       </div>
+
     </div>
   </section>
 
@@ -217,163 +216,164 @@
           <p>{{ counter.text|raw }}</p> 
         </div> 
       </div>
+
       <div class="row no-margin">
         <button id="signmeup" type="button" class="btn btn-primary btn-lg">Sign Me Up</button>      
       </div>
     </div>
   </section>
 
-<section id="steps" class="content-31">
-  <div class="container">
-      <div class="wow fadeIn title">
-            <div class="row mid-margin">
-                <div class="col-xs-12">
-                    <h2>{{ steps.title|raw }}</h2>
-                </div>
-            </div>
-            
-            <div class="row mid-margin">
-                <div class="col-xs-8 col-xs-offset-2">
-                    <p>{{ steps.description }}</p>
-                </div>
-            </div>
-      </div>
-      <div class="row mid-margin">
-        <div class="col-xs-12 col-sm-5 col-sm-offset-1 wow fadeInLeft picto">
-          <div class="img">
-            <img src="img/pict/pikto_open.svg" alt="open" />          
-          </div>
+  <section id="steps" class="content-31">
+    <div class="container">
+        <div class="wow fadeIn title">
+              <div class="row mid-margin">
+                  <div class="col-xs-12">
+                      <h2>{{ steps.title|raw }}</h2>
+                  </div>
+              </div>
+              
+              <div class="row mid-margin">
+                  <div class="col-xs-8 col-xs-offset-2">
+                      <p>{{ steps.description }}</p>
+                  </div>
+              </div>
         </div>
-        <div class="col-xs-12 col-sm-5 wow fadeInRight step-content">
-          <div class="row low-margin">
-            <div class="col-xs-12 center-block">
-              <h3>{{ steps.step1.title }}</h3>                    
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <p>{{ steps.step1.description }}</p>
-            </div>
-          </div>
-        </div>
-      </div> 
 
-      <div class="row mid-margin">
-        <div class="col-sm-1 pull-right hidden-xs"></div>
-        <div class="col-xs-12 col-sm-5 pull-right wow fadeInRight picto">
-          <div class="img">
-            <img src="img/pict/pikto_join.svg" alt="join" />                          
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-5 col-sm-offset-1 wow fadeInLeft step-content">
-          <div class="row low-margin">
-            <div class="col-xs-12">
-              <h3>{{ steps.step2.title }}</h3>                    
+        <div class="row mid-margin">
+          <div class="col-xs-12 col-sm-5 col-sm-offset-1 wow fadeInLeft picto">
+            <div class="img">
+              <img src="img/pict/pikto_open.svg" alt="open" />          
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <p>{{ steps.step2.description }}</p>
+          <div class="col-xs-12 col-sm-5 wow fadeInRight step-content">
+            <div class="row low-margin">
+              <div class="col-xs-12 center-block">
+                <h3>{{ steps.step1.title }}</h3>                    
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>{{ steps.step1.description }}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div> 
-
-      <div class="row no-margin">
-        <div class="col-xs-12 col-sm-5 col-sm-offset-1 wow fadeInLeft picto">
-          <div class="img">
-            <img src="img/pict/pikto_together.svg" alt="together" />        
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-5 wow fadeInRight step-content">
-          <div class="row low-margin">
-            <div class="col-xs-12">
-              <h3>{{ steps.step3.title }}</h3>                    
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <p>{{ steps.step3.description }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
-
-<section id="smartmatch" class="content-8">
-  <div class="container">
-    <div class="wow fadeInUp">
-      <div class="row mid-margin">
-        <div class="col-xs-12">
-          <h2>{{ smartmatch.title|raw }}</h2>
-        </div>
-      </div>
-      <div class="row mid-margin">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-          <p>{{ smartmatch.description }}</p>
-        </div>
-      </div>
-    </div>
-    <div class="row no-margin wow fadeInUp">
-      <div class="col-xs-12 picto">
-        <div class="img">
-          <img src="img/pict/pikto_smartmatch.svg" alt="smartmatch" />        
         </div> 
+
+        <div class="row mid-margin">
+          <div class="col-sm-1 pull-right hidden-xs"></div>
+          <div class="col-xs-12 col-sm-5 pull-right wow fadeInRight picto">
+            <div class="img">
+              <img src="img/pict/pikto_join.svg" alt="join" />                          
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-5 col-sm-offset-1 wow fadeInLeft step-content">
+            <div class="row low-margin">
+              <div class="col-xs-12">
+                <h3>{{ steps.step2.title }}</h3>                    
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>{{ steps.step2.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="row no-margin">
+          <div class="col-xs-12 col-sm-5 col-sm-offset-1 wow fadeInLeft picto">
+            <div class="img">
+              <img src="img/pict/pikto_together.svg" alt="together" />        
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-5 wow fadeInRight step-content">
+            <div class="row low-margin">
+              <div class="col-xs-12">
+                <h3>{{ steps.step3.title }}</h3>                    
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <p>{{ steps.step3.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="smartmatch" class="content-8">
+    <div class="container">
+      <div class="wow fadeInUp">
+        <div class="row mid-margin">
+          <div class="col-xs-12">
+            <h2>{{ smartmatch.title|raw }}</h2>
+          </div>
+        </div>
+        <div class="row mid-margin">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <p>{{ smartmatch.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row no-margin wow fadeInUp">
+        <div class="col-xs-12 picto">
+          <div class="img">
+            <img src="img/pict/pikto_smartmatch.svg" alt="smartmatch" />        
+          </div> 
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contacts" class="contacts-4">
-  <div class="container">
-    <div class="content">
-      <div class="row mid-margin wow zoomIn">
-        <div class="col-xs-12">
-          <h2>{{ contacts.title|raw }}</h2>
+  <section id="contacts" class="contacts-4">
+    <div class="container">
+      <div class="content">
+        <div class="row mid-margin wow zoomIn">
+          <div class="col-xs-12">
+            <h2>{{ contacts.title|raw }}</h2>
+          </div>
         </div>
-      </div>
-      <div class="row mid-margin">
-        <div class="col-xs-12">
-          <p>{{ contacts.description|raw }}</p>
+        <div class="row mid-margin">
+          <div class="col-xs-12">
+            <p>{{ contacts.description|raw }}</p>
+          </div>
         </div>
-      </div>
-      <div class="row mid-margin">
-        <div class="social-btns">
-          <a href="{{ contacts.twitter }}" target="_blank">
-            <div class="fui-twitter"></div>
-            <div class="fui-twitter"></div>
-          </a>
-          <a href="{{ contacts.facebook }}" target="_blank">
-            <div class="fui-facebook"></div>
-            <div class="fui-facebook"></div>
-          </a>
+        <div class="row mid-margin">
+          <div class="social-btns">
+            <a href="{{ contacts.twitter }}" target="_blank">
+              <div class="fui-twitter"></div>
+              <div class="fui-twitter"></div>
+            </a>
+            <a href="{{ contacts.facebook }}" target="_blank">
+              <div class="fui-facebook"></div>
+              <div class="fui-facebook"></div>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="row no-margin">
-        <div class="links">
-          <a href="{{ contacts.mailto.link }}">{{ contacts.mailto.label }}</a>
+        <div class="row no-margin">
+          <div class="links">
+            <a href="{{ contacts.mailto.link }}">{{ contacts.mailto.label }}</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<section id="footer" class="footer-1">
-  <div class="container">
-    <div class="col-xs-12">
-      <div class="img pull-left">
-        <img src="{{ footer.logo }}" alt="footerlogo" />
-      </div>
-      <div class="pull-right">
-        <div class="col-xs-12">
-          <p>{{ footer.text }}</p>
+  <section id="footer" class="footer-1">
+    <div class="container">
+      <div class="col-xs-12">
+        <div class="img pull-left">
+          <img src="{{ footer.logo }}" alt="footerlogo" />
+        </div>
+        <div class="pull-right">
+          <div class="col-xs-12">
+            <p>{{ footer.text }}</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 </div>
 

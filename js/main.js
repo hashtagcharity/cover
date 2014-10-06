@@ -30,6 +30,18 @@
     }, "json");
   }
 
+  function thanks() {
+    var $subscribeSection = $('#subscribe-section');
+    var $thankyouSection = $('#thankyou-section');
+
+    $subscribeSection.fadeOut('fast', function() {
+      $thankyouSection.fadeIn('fast', function() {
+        $(this).delay(3000).fadeOut('fast', function() {
+          $subscribeSection.fadeIn('fast');
+        });
+      })
+    });
+  }
 
   $('#subscribe').click(function() {
     var $emailaddress = $('#emailaddress');
@@ -46,10 +58,11 @@
 
           // conversion tracking
           ga('send', 'event', 'subscribe', 'click');
+          thanks();
         })
         .fail(function(jqXHR, textStatus, errorThrown) {
-          alert($emailaddress.val() + ": " + textStatus);
           $emailaddress.val('');
+          thanks();
         });
   });
 
