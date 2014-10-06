@@ -12,7 +12,7 @@
         "submit": "NOTIFY ME"
     },
     "pitch": {
-        "title": "PICK A <strong>CAUSE. </strong>PLEDGE YOUR <strong> TECH SKILLS. </strong>MAKE A <strong> DIFFERENCE. </strong>",
+        "title": "PICK A <strong>CAUSE. </strong>PLEDGE YOUR <strong> TECH SKILLS. <span class='hidden-sm'><br/></span></strong>MAKE A <strong> DIFFERENCE. </strong>",
         "description": "Hashtagcharity allows IT professionals to leverage and volunteer their tech skills to help nonprofits reduce their IT costs. By reducing IT costs, nonprofits can use those savings on their actual missions making the world a better place.  "
     },
     "mainthings": {
@@ -134,7 +134,7 @@
         }
     },
     "contacts": {
-        "title": "GET IN TOUCH <strong>WITH US</strong>",
+        "title": "GET IN TOUCH <span class='hidden-sm'><br/></span><strong>WITH US</strong>",
         "description": "We would love to know what you think<br/>feel free to contact us.",
         "twitter": "https://twitter.com/hashtagcharity",
         "facebook": "https://facebook.com/hashtagcharity",
