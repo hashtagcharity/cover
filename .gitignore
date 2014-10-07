@@ -14,5 +14,5 @@ node_modules/
 *.html
 dist
 
-static/css/style.css
+static/css/style.min.css
 npm-debug.log
