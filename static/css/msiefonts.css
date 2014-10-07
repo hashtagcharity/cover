@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Helvetica Ultralight';
+    src: url('/static/fonts/helvetica_ultralight-webfont.eot');
+    src: url('/static/fonts/helvetica_ultralight-webfont.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Heavy';
+    src: url('/static/fonts/helvetica_heavy-webfont.eot');
+    src: url('/static/fonts/helvetica_heavy-webfont.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
