@@ -2,6 +2,8 @@
 
 var gulp = require('gulp'),
     less = require('gulp-less'),
+    cssmin = require('gulp-cssmin'),
+    rename = require('gulp-rename'),
     path = require('path'),
     swig = require('gulp-swig'),
     data = require('gulp-data'),
@@ -62,6 +64,8 @@ gulp.task('styles', function () {
   return gulp.src(base_dir + '/static/less/style.less')
              .pipe(plumber())
              .pipe(less({ paths: [ path.join(base_dir, 'less', 'includes') ] }))
+             .pipe(cssmin())
+             .pipe(rename({suffix: '.min'}))
              .pipe(gulp.dest(base_dir + '/static/css'));
 });
 
