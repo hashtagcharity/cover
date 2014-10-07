@@ -13,6 +13,6 @@ xcode/
 node_modules/
 *.html
 dist
-
+ 
 static/css/style.min.css
 npm-debug.log
