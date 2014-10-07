@@ -21,7 +21,7 @@ var files = {
   images: [base_dir + '/img/**/*.png', base_dir + '/img/**/*.jpg', base_dir + '/img/**/*.svg'],
   js: base_dir + '/js/**/*.js',
   startup: base_dir + '/startup/**/*',
-  fonts: base_dir + '/static/font/**/*.OTF',
+  fonts: base_dir + '/static/fonts/**/*',
   css: base_dir + '/static/css/**/*.css',
   video: base_dir + '/video/**/*',
   templates: base_dir + '/static/html/**/*.html',
