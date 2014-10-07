@@ -134,7 +134,7 @@
         }
     },
     "contacts": {
-        "title": "GET IN TOUCH <span class='hidden-xs'><br></span><strong>WITH US</strong>",
+        "title": "GET IN TOUCH <span class='visible-xs'><br></span><strong>WITH US</strong>",
         "description": "We would love to know what you think<br>feel free to contact us.",
         "twitter": "https://twitter.com/hashtagcharity",
         "linkedin": "https://www.linkedin.com/company/hashtagcharity-org",
