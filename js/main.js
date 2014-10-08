@@ -62,6 +62,8 @@
         })
         .fail(function(jqXHR, textStatus, errorThrown) {
           $emailaddress.val('');
+          ga('send', 'event', 'subscribe', 'error');
+
           thanks();
         });
   });
