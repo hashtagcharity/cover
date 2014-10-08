@@ -43,7 +43,7 @@
         }
     }
     .background {
-      @media (max-width: @screen-md-min) {
+      @media (max-width: @screen-lg-min) {
         background-image: url('@{startup-basePath}common-files/img/header/img-video.jpg');
       }
     }
@@ -51,6 +51,9 @@
       input {
         -webkit-font-smoothing: subpixel-antialiased;
         background: rgba(0,0,0,0.1);
+        @media (max-width: @screen-lg-min) {
+          background: rgba(255,255,255,0.1);
+        }
         font-family: @Montserrat;
         font-size: 12px;
         color: #fff;
