@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '0.11'
 before_install: npm install -g gulp
-script: gulp ci
+script: NODE_ENV=PROD gulp ci
 deploy:
   provider: s3
   access_key_id: AKIAI2O5LRFJZNIRLVBA

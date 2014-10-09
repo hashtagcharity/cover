@@ -652,7 +652,7 @@ startupKit.attachBgVideo = function() {
         var videobackground = new $.backgroundVideo(videBgDiv, {
             "holder": "#bgVideo",
             "align" : "centerXY",
-            "path" : "video/",
+            "path" : "//d3g7icikgyxmdp.cloudfront.net/video/",
             "width": 854,
             "height": 480,
             "filename" : "preview",

@@ -9,16 +9,29 @@ var gulp = require('gulp'),
     data = require('gulp-data'),
     clean = require('gulp-clean'),
     connect = require('gulp-connect'),
+    preprocess = require('gulp-preprocess'),
     plumber = require('gulp-plumber');
 
 
-var base_dir  = __dirname;
 
+var server = { 
+  host: 'localhost', 
+  port: '8080' 
+};
+
+var base_dir  = __dirname;
 var build_dir = base_dir + '/dist';
 
+var env = process.env.NODE_ENV || 'DEV';
+var context = function() {
+              if (env=='DEV') { 
+                return { context: { CDN: '' } }
+              } else {
+                return { context: { CDN: 'http://d3g7icikgyxmdp.cloudfront.net/' } }
+              }}();
 
 var files = {
-  images: [base_dir + '/img/**/*.png', base_dir + '/img/**/*.jpg', base_dir + '/img/**/*.svg'],
+  images: base_dir + '/img/**/*.*',
   js: base_dir + '/js/**/*.js',
   startup: base_dir + '/startup/**/*',
   fonts: base_dir + '/static/fonts/**/*',
@@ -28,13 +41,6 @@ var files = {
   template_text: base_dir + '/static/html/**/*.json',
   less: [base_dir + '/static/less/**/*.less', base_dir + '/less-files/*.less']
 };
-
-
-var server = {
-  host: 'localhost',
-  port: '8080'
-};
-
 
 gulp.task('clean', function () {
   return gulp.src(build_dir, { read: false })
@@ -56,17 +62,25 @@ gulp.task('templates', function() {
   return gulp.src(base_dir + '/static/html/*.html')
              .pipe(plumber())
              .pipe(swig(opts))
+             .pipe(preprocess(context))
              .pipe(gulp.dest(base_dir));
 });
-
 
 gulp.task('styles', function () {
   return gulp.src(base_dir + '/static/less/style.less')
              .pipe(plumber())
              .pipe(less({ paths: [ path.join(base_dir, 'less', 'includes') ] }))
              .pipe(cssmin())
+             .pipe(preprocess(context))
              .pipe(rename({suffix: '.min'}))
              .pipe(gulp.dest(base_dir + '/static/css'));
+});
+
+gulp.task('preprocess', function() {
+  return gulp.src(base_dir + '/static/css/style.min.css')
+             .pipe(plumber())
+             .pipe(preprocess(context))
+             .pipe(gulp.dest(base_dir + '/static/cssss'));
 });
 
 
@@ -97,8 +111,7 @@ gulp.task('watch', ['connect'], function() {
 
 gulp.task('copy', ['default'], function() {
   var filesToCopy = [
-    files.images[0], files.images[1], files.images[2], 
-    files.js, files.startup, files.fonts, files.css, files.video,
+    files.images, files.js, files.startup, files.fonts, files.css, files.video,
     './*.html'
   ];
 
