@@ -1,18 +1,11 @@
-# cache files for sublime text
+# sublime
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
+*.sublime-*
 
-# workspace files are user-specific
-*.sublime-workspace
-*.sublime-project
-
-# sftp configuration file
-sftp-config.json
-xcode/
-node_modules/
-*.html
+xcode
+node_modules
 dist
- 
-static/css/style.min.css
+
 npm-debug.log
