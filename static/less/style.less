@@ -1,21 +1,22 @@
 @startup-basePath: "../../startup/";
+@startup-less: "../../less-files/";
 
-@import '../../startup/flat-ui/less/variables.less';
-@import '../../startup/flat-ui/less/mixins.less';
-@import '../../startup/common-files/less/mixins.less';
-@import '../../startup/common-files/less/common.less';
-@import '../../startup/common-files/less/helper.less';
-@import '../../startup/common-files/less/navbar.less';
+@import '@{startup-basePath}flat-ui/less/variables.less';
+@import '@{startup-basePath}flat-ui/less/mixins.less';
+@import '@{startup-basePath}common-files/less/mixins.less';
+@import '@{startup-basePath}common-files/less/common.less';
+@import '@{startup-basePath}common-files/less/helper.less';
+@import '@{startup-basePath}common-files/less/navbar.less';
 
 
-@import '../../less-files/header-23.less';      // header
-@import '../../less-files/content-8.less';      // pitch, smartmatch
-@import '../../less-files/section3.less';       // mainthings, partners
-@import '../../less-files/counter-1.less';      // counter
-@import '../../less-files/content-31.less';     // steps
-@import '../../less-files/crew-4.less';         // team
-@import '../../less-files/contact-4.less';      // contacts
-@import '../../less-files/footer-1.less';       // footer
+@import '@{startup-less}header-23.less';      // header
+@import '@{startup-less}content-8.less';      // pitch, smartmatch
+@import '@{startup-less}section3.less';       // mainthings, partners
+@import '@{startup-less}counter-1.less';      // counter
+@import '@{startup-less}content-31.less';     // steps
+@import '@{startup-less}crew-4.less';         // team
+@import '@{startup-less}contact-4.less';      // contacts
+@import '@{startup-less}footer-1.less';       // footer
 
 @import 'variables.less';
 @import 'margins.less';
@@ -35,7 +36,7 @@
   font-family: @type;
   font-size: @size;
   font-weight: 300;
-  color: @color;
+  color: @color; 
   .no-margin;
 }
 
