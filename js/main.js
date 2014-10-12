@@ -25,8 +25,10 @@
     }
 
     $.get("http://service.hashtagcharity.org:83/api/subscriptions/statistics", function(data) {
-      $('#counter').css("display", "block");
-      $('#counterNumber').html('<strong>' + numberWithCommas(data.allSubscriptions) + '</strong>');
+      if (data.allSubscriptions > 1000) {
+        $('#counter').css("display", "block");
+        $('#counterNumber').html('<strong>' + numberWithCommas(data.allSubscriptions) + '</strong>');
+      }
     }, "json");
   }
 
