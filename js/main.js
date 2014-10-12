@@ -12,7 +12,7 @@
   $('#signmeup').click(function() {
     $('html, body').animate({ 
       scrollTop: 0
-    }, 1000);
+    }, 1000); 
     $('#emailaddress').focus();
     
     return false;

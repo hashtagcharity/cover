@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="<!-- @echo CDN -->static/css/style.min.css">
 
   <!-- site animation -->
-  <link rel="stylesheet" href="<!-- @echo CDN -->static/css/animate.min.css">
+  <link rel="stylesheet" href="<!-- @echo CDN -->static/css/lib/animate.min.css">
 
   <!-- Google fonts -->
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -419,11 +419,18 @@
 <script src="<!-- @echo CDN -->startup/common-files/js/froogaloop.min.js"></script>
 <script src="<!-- @echo CDN -->startup/common-files/js/startup-kit.js"></script>
 
-<script src="<!-- @echo CDN -->js/waypoints.min.js"></script> 
-<script src="<!-- @echo CDN -->js/social.js"></script>
-<script src="<!-- @echo CDN -->js/WOW.min.js"></script>
+<script src="<!-- @echo CDN -->js/lib/waypoints.min.js"></script> 
+<script src="<!-- @echo CDN -->js/lib/WOW.min.js"></script>
 
+<!-- @if env='PROD' -->
+<script src="<!-- @echo CDN -->js/social.min.js"></script>
+<script src="<!-- @echo CDN -->js/main.min.js"></script>
+<!-- @endif -->
+
+<!-- @if env='DEV' -->
+<script src="<!-- @echo CDN -->js/social.js"></script>
 <script src="<!-- @echo CDN -->js/main.js"></script>
+<!-- @endif -->
 
 </body>
 

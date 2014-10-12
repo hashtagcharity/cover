@@ -7,11 +7,13 @@ var gulp = require('gulp'),
     path = require('path'),
     swig = require('gulp-swig'),
     data = require('gulp-data'),
-    clean = require('gulp-clean'),
+    del = require('del'),
+    runSequence = require('run-sequence'),
     connect = require('gulp-connect'),
     preprocess = require('gulp-preprocess'),
+    uglify = require('gulp-uglify'),
+    gulpif = require('gulp-if'),
     plumber = require('gulp-plumber');
-
 
 
 var server = { 
@@ -23,34 +25,16 @@ var base_dir  = __dirname;
 var build_dir = base_dir + '/dist';
 
 var env = process.env.NODE_ENV || 'DEV';
-var context = function() {
-              if (env=='DEV') { 
-                return { context: { CDN: '' } }
-              } else {
-                return { context: { CDN: 'http://d3g7icikgyxmdp.cloudfront.net/' } }
-              }}();
+var context = 
+              isProd ?  
+                { context: { CDN: 'http://d3g7icikgyxmdp.cloudfront.net/', env: env } }
+              : 
+                { context: { CDN: '', env: env } };
+var isProd = (env === 'PROD');
 
-var files = {
-  images: base_dir + '/img/**/*.*',
-  js: base_dir + '/js/**/*.js',
-  startup: base_dir + '/startup/**/*',
-  fonts: base_dir + '/static/fonts/**/*',
-  css: base_dir + '/static/css/**/*.css',
-  video: base_dir + '/video/**/*',
-  templates: base_dir + '/static/html/**/*.html',
-  template_text: base_dir + '/static/html/**/*.json',
-  less: [base_dir + '/static/less/**/*.less', base_dir + '/less-files/*.less']
-};
-
-gulp.task('clean', function () {
-  return gulp.src(build_dir, { read: false })
-             .pipe(clean());
+gulp.task('clean', function (cb) {
+  del(['dist'], cb);
 });
-
-
-var getJsonData = function(file) {
-  return require(base_dir + '/static/html/' + path.basename(file.path) + '.json');
-};
 
 
 gulp.task('templates', function() {
@@ -59,34 +43,42 @@ gulp.task('templates', function() {
     defaults: { cache: false }
   };
 
-  return gulp.src(base_dir + '/static/html/*.html')
+  return gulp.src('static/html/*.html', { base: base_dir + '/static/html' })
              .pipe(plumber())
              .pipe(swig(opts))
              .pipe(preprocess(context))
-             .pipe(gulp.dest(base_dir));
+             .pipe(gulp.dest(build_dir));
 });
 
 gulp.task('styles', function () {
-  return gulp.src(base_dir + '/static/less/style.less')
+  return gulp.src('static/less/style.less')
              .pipe(plumber())
              .pipe(less({ paths: [ path.join(base_dir, 'less', 'includes') ] }))
              .pipe(cssmin())
              .pipe(preprocess(context))
-             .pipe(rename({suffix: '.min'}))
-             .pipe(gulp.dest(base_dir + '/static/css'));
+             .pipe(rename({ suffix: '.min' }))
+             .pipe(gulp.dest(build_dir + '/static/css'));
 });
 
-gulp.task('preprocess', function() {
-  return gulp.src(base_dir + '/static/css/style.min.css')
-             .pipe(plumber())
-             .pipe(preprocess(context))
-             .pipe(gulp.dest(base_dir + '/static/cssss'));
+
+gulp.task('compress', function() {
+  return gulp.src(['js/main.js', 'js/social.js'])
+             .pipe(gulpif(isProd, uglify()))
+             .pipe(gulpif(isProd, rename({ suffix: '.min' })))
+             .pipe(gulp.dest(build_dir + '/js'))
+});
+
+
+gulp.task('copy', function() {
+  var toCopy = ['static/css/**/*.css', 'static/fonts/**/*.*', 'js/lib/**/*.js', 'startup/**/*.*', 'video/**/*.*', 'img/**/*.*'];
+  return gulp.src(toCopy, { base: '.'})
+             .pipe(gulp.dest(build_dir));  
 });
 
 
 gulp.task('connect', function() {
   connect.server({
-    root: base_dir,
+    root: build_dir,
     host: server.host,
     port: server.port,
     livereload: true
@@ -94,34 +86,22 @@ gulp.task('connect', function() {
 });
 
 
-gulp.task('reload', ['build'], function() {
-  gulp.src('./*.html')
-      .pipe(connect.reload());
+gulp.task('reload', function() {
+  return gulp.src(['dist/*.html'])
+             .pipe(plumber())
+             .pipe(connect.reload());
 });
 
 
 gulp.task('watch', ['connect'], function() { 
-  var watched = [
-    files.js, files.less[0], files.less[1], files.templates, files.template_text
-  ];
-
-  gulp.watch(watched, ['reload']);
+  gulp.watch( [ 'static/html/**/*' ], ['templates', 'reload']);
+  gulp.watch( [ 'js/**/*' ], ['compress', 'reload']);
+  gulp.watch( [ 'static/less/**/*', 'less-files/**/* '], ['styles', 'reload']);
 });
 
 
-gulp.task('copy', ['default'], function() {
-  var filesToCopy = [
-    files.images, files.js, files.startup, files.fonts, files.css, files.video,
-    './*.html'
-  ];
+gulp.task('build', ['templates', 'styles', 'compress', 'copy']);
 
-  gulp.src(filesToCopy, { base: base_dir })
-      .pipe(gulp.dest(build_dir));
+gulp.task('default', function() {
+  runSequence('clean', 'build');
 });
-
-
-gulp.task('build', ['templates', 'styles']);
-
-gulp.task('default', ['clean', 'build']);
-
-gulp.task('ci', ['copy']);
