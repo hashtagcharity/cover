@@ -55,6 +55,10 @@
         "title": "<strong>#</strong>SMART<strong>MATCH</strong>",
         "description": "We have our own algorithm to match the right people to the right projects. We take into consideration what causes the volunteers care most about, what IT skills they posses, and connect them to projects in their area of interest that need their specific skills."
     },
+    "blog": {
+        "title": "<strong>#</strong>CHARITY<strong>BLOG</strong>",
+        "description": ""
+    },
     "partners": {
         "title": "WE ARE <strong>NOT ALONE</strong><br>WE ALREADY HAVE <strong>GREAT PARTNERS</strong><br>AND LOOKING FOR MORE",
         "partner1": {

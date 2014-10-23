@@ -41,6 +41,9 @@
 
   <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
  
+  <!-- For Medium Blog-->
+  <script async src="https://static.medium.com/embed.js"></script>
+
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
     <script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -331,6 +334,23 @@
           <div class="img">
             <img src="<!-- @echo CDN -->img/pict/pikto_smartmatch.svg" alt="smartmatch">        
           </div> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="blog-content">
+    <div class="container">
+      <div class="wow fadeInUp">
+        <div class="row mid-margin">
+          <div class="col-xs-12">
+            <h2>{{ blog.title|raw }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row no-margin wow fadeInUp">
+        <div class="col-xs-12">
+            <a class="m-collection" data-width="100%" data-border="false" data-collapsed="false" href="https://medium.com/non-profit-picks">Non-Profit Stories</a>
         </div>
       </div>
     </div>
