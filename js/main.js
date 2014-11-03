@@ -8,6 +8,15 @@
 })();
 
 (function($) {
+
+  $('#pitch').waypoint(function(direction) {
+    if (direction === 'down') {
+      $('#sidebar').fadeIn();
+    } else {
+      $('#sidebar').fadeOut();
+    }
+  }); 
+
  
   $('#signmeup').click(function() {
     $('html, body').animate({ 
