@@ -51,13 +51,55 @@
 
 <body id="top" data-campaign-url="http://hashtagcharity.org/?utm_medium=socialmedia&amp;utm_campaign=2014_subscribe">
 
-  <div id="sidebar"> <!-- class="hidden-xs hidden-sm"> -->
+  <div id="sidebar">
     <div class="sharebuttons">
       <a class="btn btn-large twitter-share track-social" data-social-platform="twitter" data-share-text="Volunteer your skills with @hashtagcharity, the platform for IT Pros who care" data-share-url="http://hashtagcharity.org" data-share-hashtags="charity,volunteering,socialgood"></a>
       <a class="btn btn-large linkedin-share track-social" data-social-platform="linkedin" data-share-title="#charity" data-share-summary="Volunteer your skills with hashtagcharity, the platform for IT Pros who care" data-share-source="http://hashtagcharity.org"></a>
       <a class="btn btn-large facebook-share track-social" data-social-platform="facebook"></a>
       <a class="btn btn-large googleplus-share track-social" data-social-platform="googleplus"></a>
     </div>
+  </div>
+
+  <div id="navbar" class="navbar-1">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand page-scroll" href="#header">
+            <img src="<!-- @echo CDN -->img/charity_logo.png" alt="logo">
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse pull-left">
+          <ul class="nav navbar-nav">
+            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+            <li class="hidden">
+              <a class="page-scroll" href=""><strong>#charity</strong></a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#pitch"><strong>Pitch</strong></a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#smartmatch"><strong>Smartmach</strong></a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#footer"><strong>Contact</strong></a>
+            </li>
+            <li>
+              <a class="page-scroll" href=""><strong>About</strong></a>
+            </li>
+          </ul>
+        </div>
+      <!-- /.navbar-collapse -->
+      </div>
+    <!-- /.container -->
+    </nav>
   </div>
 
   <div class="page-wrapper">
@@ -68,17 +110,9 @@
       </div>
     </header>
 
-    <section id="header" class="header-23-sub">
-        <div id="bgVideo" class="background">&nbsp;</div>
+    <section id="header" class="header-23-sub" data-spy="scroll" data-target=".navbar-fixed-top">
+      <div id="bgVideo" class="background">&nbsp;</div>
         <div class="container">
-          <div class="row low-margin">
-            <div class="col-sm-12">
-              <div id="logo" class="img">
-                <img src="<!-- @echo CDN -->img/charity_logo.png" alt="logo">
-              </div>
-            </div>
-          </div>
-
           <div class="row low-margin">
             <div class="col-xs-12">
               <h1>{{ header.title|raw }}</h1>

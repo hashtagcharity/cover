@@ -20,6 +20,22 @@
     return false;
   });
 
+  $(document).ready(function(){       
+    var scroll_start = 0;
+    var startchange = $('#header');
+    var offset = startchange.offset();
+    if (startchange.length){
+      $(document).scroll(function() { 
+        scroll_start = $(this).scrollTop();
+        if(scroll_start > offset.top) {
+            $(".navbar-default").css('background-color', '#8B5789');
+         } else {
+            $('.navbar-default').css('background-color', 'transparent');
+         }
+      });
+    }
+  });
+
   if (window.matchMedia("(max-width: 769px)").matches) {
     //We are 769px or below, disable fadeIn animation
     $('#sidebar').fadeIn();
