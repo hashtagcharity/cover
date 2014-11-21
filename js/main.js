@@ -1,3 +1,5 @@
+'use strict';
+
 (function() {
   new WOW({
     boxClass: 'wow',
@@ -8,7 +10,7 @@
 })();
 
 (function($) {
- 
+
   $('#signmeup').click(function() {
     $('html, body').animate({ 
       scrollTop: 0
@@ -17,6 +19,19 @@
     
     return false;
   });
+
+  if (window.matchMedia("(max-width: 769px)").matches) {
+    //We are 769px or below, disable fadeIn animation
+    $('#sidebar').fadeIn();
+  } else {
+    $('#pitch').waypoint(function(direction) {
+      if (direction === 'down') {
+        $('#sidebar').fadeIn();
+      } else {
+        $('#sidebar').fadeOut();
+      }
+    }) 
+  }
 
   function updateCounter() {
 
