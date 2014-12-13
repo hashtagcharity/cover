@@ -6,7 +6,7 @@
         }
     },
 
-    "header": { 
+    "header": {
         "title": "VOLUNTEER YOUR <strong> TECH SKILLS</strong>",
         "emailtext": "Your Email Address",
         "submit": "GET EARLY ACCESS"
@@ -149,7 +149,7 @@
         }
     },
     "footer": {
-        "text": "© 2014 #charity. All Rights Reserverd"
+        "text": "© 2014 #charity. All Rights Reserved"
     }
-    
+
 }
