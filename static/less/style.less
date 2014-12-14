@@ -18,6 +18,7 @@
 @import '@{startup-less}crew-4.less';         // team
 @import '@{startup-less}contact-4.less';      // contacts
 @import '@{startup-less}footer-1.less';       // footer
+@import '@{startup-less}content-13.less';
 
 @import 'variables.less';
 @import 'margins.less';
@@ -57,7 +58,7 @@ h1 {
 h2 {
   .font-base(@header-font-type, @h2-font-size, #52606c);
   strong {
-    .font-base(@header-strong-font-type, @h2-font-size, @lead-color);
+    .font-base(@header-strong-font-type, @h2-font-size, @lead-color-light);
   }
   &, & > strong {
     @media(max-width: @screen-xs-max) {
@@ -67,7 +68,7 @@ h2 {
 }
 
 h3 {
-  .font-base(@text-font-type, @h3-font-size, @lead-color);
+  .font-base(@text-font-type, @h3-font-size, @lead-color-light);
   &, & > strong {
     @media(max-width: @screen-xs-max) {
       font-size: 16pt;

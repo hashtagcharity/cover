@@ -1,15 +1,14 @@
 {
     "common": {
         "button": {
-            "signup": "SIGN UP NOW",
-            "share": "SHARE US"
+            "access": "GET EARLY ACCESS"
+        },
+        "emailinput": {
+            "placeholder": "Enter your email address"
         }
     },
-
     "header": {
-        "title": "VOLUNTEER YOUR <strong> TECH SKILLS</strong>",
-        "emailtext": "Your Email Address",
-        "submit": "GET EARLY ACCESS"
+        "title": "VOLUNTEER YOUR <strong> TECH SKILLS</strong>"
     },
     "pitch": {
         "title": "PICK A <strong>CAUSE. </strong>PLEDGE YOUR <strong> TECH SKILLS. <span class='hidden-xs'><br></span></strong>",

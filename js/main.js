@@ -47,12 +47,45 @@
     }, "json");
   }
 
-  function thanks() {
-    var $subscribeSection = $('#subscribe-section');
-    var $thankyouSection = $('#thankyou-section');
+  $('#subscribe-1').click(function() {
+    doSubscription(1, thanks, fail)
+  });
 
-    var $subscribeSection2 = $('#subscribe-section2');
-    var $thankyouSection2 = $('#thankyou-section2');
+  $('#subscribe-2').click(function() {
+    doSubscription(2, thanks, fail)
+  });
+
+
+  function doSubscription(subNumber, success, failure) {
+    var $emailaddress = $('#emailaddress-' + subNumber);
+    var emailAddressValue = $emailaddress.val();
+
+    if (!emailAddressValue || emailAddressValue.length === 0 || !emailAddressValue.trim()) {
+      ga('send', 'event', 'subscribe', 'emptyaddress');
+      return;
+    }
+
+    $.post("http://service.hashtagcharity.org:83/api/subscriptions/add", {
+          emailAddress: emailAddressValue
+        },
+        function(data, textStatus, jqXHR) {
+          $emailaddress.val('');
+          success(subNumber);
+        })
+      .fail(function(jqXHR, textStatus, errorThrown) {
+        $emailaddress.val('');
+        failure(errorThrown, subNumber);
+      });
+  }
+
+  function thanks(subNumber) {
+    updateCounter();
+
+    // conversion tracking
+    ga('send', 'event', 'subscribe', 'click');
+
+    var $subscribeSection = $('#subscribe-section-' + subNumber);
+    var $thankyouSection = $('#thankyou-section-' + subNumber);
 
     $subscribeSection.fadeOut('fast', function() {
       $thankyouSection.fadeIn('fast', function() {
@@ -61,69 +94,12 @@
         });
       })
     });
-
-    $subscribeSection2.fadeOut('fast', function() {
-      $thankyouSection2.fadeIn('fast', function() {
-        $(this).delay(3000).fadeOut('fast', function() {
-          $subscribeSection2.fadeIn('fast');
-        });
-      })
-    });
   }
 
-  $('#subscribe').click(function() {
-    var $emailaddress = $('#emailaddress');
-    var emailAddressValue = $emailaddress.val();
-
-    if (!emailAddressValue || emailAddressValue.length === 0 || !emailAddressValue.trim()) {
-      return;
-    }
-
-    $.post("http://service.hashtagcharity.org:83/api/subscriptions/add", {
-        emailAddress: emailAddressValue
-      },
-      function(data, textStatus, jqXHR) {
-        $emailaddress.val('');
-        updateCounter();
-
-        // conversion tracking
-        ga('send', 'event', 'subscribe', 'click');
-        thanks();
-      })
-      .fail(function(jqXHR, textStatus, errorThrown) {
-        $emailaddress.val('');
-        ga('send', 'event', 'subscribe', 'error');
-
-        thanks();
-      });
-  });
-
-  $('#subscribe2').click(function() {
-    var $emailaddress = $('#emailaddress2');
-    var emailAddressValue = $emailaddress.val();
-
-    if (!emailAddressValue || emailAddressValue.length === 0 || !emailAddressValue.trim()) {
-      return;
-    }
-
-    $.post("http://service.hashtagcharity.org:83/api/subscriptions/add", {
-        emailAddress: emailAddressValue
-      },
-      function(data, textStatus, jqXHR) {
-        $emailaddress.val('');
-        updateCounter();
-
-        // conversion tracking
-        ga('send', 'event', 'subscribe', 'click');
-        thanks();
-      })
-      .fail(function(jqXHR, textStatus, errorThrown) {
-        $emailaddress.val('');
-        ga('send', 'event', 'subscribe', 'error');
-
-        thanks();
-      });
-  });
+  function fail(errorThrown, subNum) {
+    ga('send', 'event', 'subscribe', 'error');
+    console.log('subscription ' + subNum + ' failed...')
+  }
 
   updateCounter();
 
