@@ -40,7 +40,7 @@
         }
 
         $.get("http://service.hashtagcharity.org:83/api/subscriptions/statistics", function(data) {
-            if (data.allSubscriptions > 1000) {
+            if (data.allSubscriptions > 744) {
                 $('#counter').css("display", "block");
                 $('#counterNumber').html('<strong>' + numberWithCommas(data.allSubscriptions) + '</strong>');
             }
@@ -77,12 +77,12 @@
         }
 
         $.post("http://service.hashtagcharity.org:83/api/subscriptions/add", {
-                emailAddress: emailAddressValue
-            },
-            function(data, textStatus, jqXHR) {
-                $emailaddress.val('');
-                success(subNumber);
-            })
+                    emailAddress: emailAddressValue
+                },
+                function(data, textStatus, jqXHR) {
+                    $emailaddress.val('');
+                    success(subNumber);
+                })
             .fail(function(jqXHR, textStatus, errorThrown) {
                 $emailaddress.val('');
                 failure(errorThrown, subNumber);
